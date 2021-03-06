@@ -15,8 +15,8 @@ body {
 }
 
 .content_header_survival {
-    background-image: url(assets/Fox.jpg);
-    min-height: 780px;
+    background-image: url(assets/Rectangle.png);
+    min-height: 779px;
 }
 
 .btn {
@@ -27,18 +27,22 @@ body {
     border-radius: 5px;
     font-size: 23px;
     width: 116px;
-    height: 46px;
+    height: 45px;
     text-align: center;
     line-height: 46px;
     text-decoration: none;
+    padding-top: 1px;
 }
 
 .search {
     display: inline-block;
-    background: url(assets/Search.svg);
+    background: url(assets/Vector.png) no-repeat;
     width: 32px;
     height: 32px;
     line-height: 32px;
+    vertical-align:middle;
+    padding-bottom: 4px;
+    padding-left: -4px;
 }
 
 .header_navigation li {
@@ -46,34 +50,18 @@ body {
     display: inline-block;
 }
 
-.contacts {
-    display: inline-block;
-    line-height: 60px;
-    width: 96px;
-    height: 60px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 23px;
-}
-
-.blog {
-    display: inline-block;
-    line-height: 60px;
-    width: 50px;
-    height: 60px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 23px;
-}
-
 .nav {
     float: right;
+    margin-top: 3px;
 }
 
 .logo {
     display: inline-block;
     width: 70px;
     height: 60px;
-    background: url("assets/Logo.svg");
+    background: url("assets/Frame (3).svg");
     margin-top: 19px;
+    font-weight: normal;
 }
 
 .logo_text {
@@ -83,10 +71,111 @@ body {
     line-height: 60px;
     text-transform: uppercase;
     font-size: 32px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(247, 247, 247, 1);
     margin-left: 82px;
+    font-weight: normal;
+}
+
+.header_navigation {
+    margin-top: 15px;
 }
 
 .header_navigation li {
-    margin-left: 61px;
+    margin-left: 52px;
+}
+
+.contacts {
+    display: inline-block;
+    line-height: 60px;
+    width: 96px;
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    margin-right: 8px;
+}
+
+
+.blog {
+    display: inline-block;
+    line-height: 60px;
+    width: 50px;
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    margin-right: 6px;
+}
+
+.article_container {
+    height: 400px;
+}
+
+.survival {
+    line-height: 72px;
+    font-size: 48px;
+    width: 199px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgba(205, 99, 38, 1);
+}
+
+.header_container {
+    height: 160px;
+}
+
+.survival_text {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    width: 274px;
+    height: 108px;
+    line-height: 27px;
+    margin: 11px 0 0 1px;
+}
+
+.btn_donate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    background: #CD6326;
+    border-radius: 5px;
+    font-size: 23px;
+    width: 161px;
+    height: 60px;
+    text-align: center;
+    line-height: 27px;
+    text-decoration: none;
+    margin-top: 48px;
+}
+
+.content_header_survival {
+    height: 779px;
+}
+
+.content_latest_articles {
+    height: 1368px;
+    background: #CCCCCC;
+}
+
+.content_head {
+    color: black;
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 123px;
+    text-align: center;
+}
+
+.content_head5 {
+    color: rgba(102, 102, 102, 1);
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 36px;
+    margin: 24px;
+    font-weight: 400;
 }
