@@ -179,3 +179,29 @@ body {
     margin: 24px;
     font-weight: 400;
 }
+
+.slider {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+}
+
+.slider figure img {
+    margin: 0;
+}
+
+.left {
+    display: block;
+    background: url("assets/Vector (1).png") no-repeat center;
+    width: 30px;
+    padding: 15px;
+}
+
+.right {
+    display: block;
+    background: url("assets/Vector (2).png") no-repeat center;
+    width: 30px;
+    padding: 15px;
+}
