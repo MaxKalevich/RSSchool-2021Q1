@@ -161,7 +161,7 @@ body {
 }
 
 .content_head {
-    color: black;
+    color: #333333;
     font-size: 48px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -218,21 +218,18 @@ body {
     padding-top: 180px;
 }
 
-.text_left {
-    position: absolute;
-    left: 581px;
-    top: 1364px;
-    font-size: 22px;
-    line-height: 36px;
-    font-family: 'Open Sans', sans-serif;
-    color: rgba(247, 247, 247, 1);
-    font-weight: normal;
+.pic {
+    position: relative;
+    width: 100%;
 }
 
-.text_center {
+.text_left {
     position: absolute;
-    left: 925px;
-    top: 1364px;
+    top: 247px;
+    padding:0;
+    margin: 0;
+    left: 126px;
+    width: 100%;
     font-size: 22px;
     line-height: 36px;
     font-family: 'Open Sans', sans-serif;
@@ -242,8 +239,11 @@ body {
 
 .text_left_span {
     position: absolute;
-    left: 515px;
-    top: 1440px;
+    top: 293px;
+    left: 59px;
+    width: 100%;
+    padding:0;
+    margin: 0;
     font-size: 17px;
     line-height: 27px;
     font-family: 'Open Sans', sans-serif;
@@ -251,10 +251,27 @@ body {
     color: rgba(247, 247, 247, 1);
 }
 
+.text_center {
+    position: absolute;
+    top: 247px;
+    padding:0;
+    margin: 0;
+    left: 110px;
+    width: 100%;
+    font-size: 22px;
+    line-height: 36px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(247, 247, 247, 1);
+    font-weight: normal;
+}
+
 .text_center_span {
     position: absolute;
-    left: 891px;
-    top: 1440px;
+    top: 293px;
+    left: 76px;
+    width: 100%;
+    padding:0;
+    margin: 0;
     font-size: 17px;
     line-height: 27px;
     font-family: 'Open Sans', sans-serif;
@@ -264,8 +281,11 @@ body {
 
 .text_right {
     position: absolute;
-    left: 1305px;
-    top: 1364px;
+    top: 247px;
+    padding:0;
+    margin: 0;
+    left: 129px;
+    width: 100%;
     font-size: 22px;
     line-height: 36px;
     font-family: 'Open Sans', sans-serif;
@@ -275,8 +295,11 @@ body {
 
 .text_right_span {
     position: absolute;
-    left: 1265px;
-    top: 1440px;
+    top: 293px;
+    left: 90px;
+    width: 100%;
+    padding:0;
+    margin: 0;
     font-size: 17px;
     line-height: 27px;
     font-family: 'Open Sans', sans-serif;
@@ -313,4 +336,9 @@ body {
     font-family: "Roboto", sans-serif;
     margin-left: -6px;
     padding: 0;
+}
+
+.footer {
+    background-image: url(assets/Re.jpg);
+    height: 359px;
 }
