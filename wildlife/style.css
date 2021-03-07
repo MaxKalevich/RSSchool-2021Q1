@@ -14,6 +14,21 @@ body {
     margin: 0 auto;
 }
 
+.background_content_header_survival {
+    background-color: #02160b;
+    width: 100%;
+}
+
+.background_content_latest_articles {
+    background-color: #cccccc;
+    width: 100%;
+}
+
+.background_content_footer {
+    background-color: #181617;
+    width: 100%;
+}
+
 .content_header_survival {
     background-image: url(assets/Rectangle.png);
     min-height: 779px;
@@ -32,6 +47,39 @@ body {
     line-height: 46px;
     text-decoration: none;
     padding-top: 1px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #CD6326;
+}
+
+.btn:active {
+    background-color: rgba(143, 86, 19, 1);
+    border: 2px solid rgba(143, 86, 19, 1);
+}
+
+.btn_donate:hover {
+    background-color: rgba(227, 145, 40, 1);
+}
+
+.btn_donate:active {
+    background-color: rgba(143, 86, 19, 1);
+
+}
+
+.submit:hover {
+    background-color: rgba(227, 145, 40, 1);
+    border: 1px solid rgba(227, 145, 40, 1);
+}
+
+.submit:active {
+    background-color: rgba(143, 86, 19, 1);
+    border: 2px solid rgba(143, 86, 19, 1);
+}
+
+.submit {
+    outline: none;
 }
 
 .search {
@@ -43,6 +91,7 @@ body {
     vertical-align: middle;
     padding-bottom: 4px;
     padding-left: -4px;
+    cursor: pointer;
 }
 
 .header_navigation li {
@@ -73,7 +122,7 @@ body {
     font-size: 32px;
     font-family: 'Roboto', sans-serif;
     color: rgba(247, 247, 247, 1);
-    margin-left: 82px;
+    margin-left: 85px;
     font-weight: normal;
 }
 
@@ -93,6 +142,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 23px;
     margin-right: 8px;
+    cursor: pointer;
 }
 
 
@@ -104,6 +154,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 23px;
     margin-right: 6px;
+    cursor: pointer;
 }
 
 .article_container {
@@ -135,6 +186,7 @@ body {
 }
 
 .btn_donate {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -326,6 +378,7 @@ body {
 }
 
 .submit {
+    cursor: pointer;
     width: 123px;
     height: 63px;
     background-color: #CD6326;
@@ -360,7 +413,7 @@ body {
     text-transform: uppercase;
     font-size: 32px;
     font-family: 'Roboto', sans-serif;
-    margin-left: 82px;
+    margin-left: 85px;
     font-weight: normal;
 }
 
@@ -399,6 +452,11 @@ body {
     height: 34px;
     padding-top: 11px;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.soc1:hover {
+    background: url(assets/Facebook.svg) no-repeat;
 }
 
 .soc2 {
@@ -410,6 +468,11 @@ body {
     height: 34px;
     padding-top: 11px;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.soc2:hover {
+    background: url(assets/inst.svg) no-repeat;
 }
 
 .soc3 {
@@ -421,6 +484,11 @@ body {
     padding-top: 11px;
     vertical-align: middle;
     margin-left: -6px;
+    cursor: pointer;
+}
+
+.soc3:hover {
+    background: url(assets/Pine.svg) no-repeat;
 }
 
 .soc4 {
@@ -432,9 +500,18 @@ body {
     height: 34px;
     padding-top: 11px;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.soc4:hover {
+    background: url(assets/Teleg.svg) no-repeat;
 }
 
 .navigation_footer_social {
     padding: 3px;
     margin-left: 38px;
+}
+
+.navigation_footer_list li a {
+    cursor: pointer;
 }
