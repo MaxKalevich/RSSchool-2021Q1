@@ -12,7 +12,6 @@ html {
 }
 body {
 	min-height: 100vh;
-	background-color: #313940;
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	background: #313940;
 	overflow-x: hidden;
@@ -141,6 +140,7 @@ body {
 	bottom: -45px;
 	left: 20px;
 	transition: 0.3s;
+	pointer-events: none;
 }
 .piano-key::after {
 	display: none;
@@ -159,12 +159,15 @@ body {
 .piano-key.sharp::after {
 	bottom: 175px;
 	left: 7px;
+	pointer-events: none;
 }
 .piano-key.letter::before {
 	display: none;
+	pointer-events: none;
 }
 .piano-key.letter::after {
 	display: block;
+	pointer-events: none;
 }
 .piano-key-letter::before {
 	content: attr(data-letter);
@@ -299,6 +302,7 @@ body {
 		bottom: -35px;
 		left: 7px;
 		font-size: 22px;
+
 	}
 	.piano-key.sharp::before,
 	.piano-key.sharp::after {
