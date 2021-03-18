@@ -4,6 +4,7 @@ const SHARP = document.querySelectorAll(".sharp");
 const PIANO_KEY = document.querySelectorAll(".piano-key"); //querySelectorAll возвращает все элементы внутри elem, удовлетворяющие данному CSS селектору.
 const buttonLaters = document.querySelector(".btn-letters");
 const buttonNotes = document.querySelector(".btn-notes");
+const buttonFullScreen = document.querySelector(".fullscreen");
 
 const startAudio = (event) => {
     event.target.classList.add("piano-key-active");
@@ -84,4 +85,13 @@ function highlight(target) {
     }
     buttonClick = target;
     buttonClick.classList.add("btn-active");
+}
+buttonFullScreen.onclick = function() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+    };
 }
