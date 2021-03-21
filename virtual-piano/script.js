@@ -1,7 +1,7 @@
 const PIANO = document.querySelector(".piano");
 const SHARP = document.querySelectorAll(".sharp");
 const PIANO_KEY = document.querySelectorAll(".piano-key");
-const buttonLaters = document.querySelector(".btn-letters");
+const buttonLetters = document.querySelector(".btn-letters");
 const buttonNotes = document.querySelector(".btn-notes");
 const buttonFullScreen = document.querySelector(".fullscreen");
 
@@ -48,7 +48,7 @@ const stopCorrespondOver = (event) => {
 
 PIANO.addEventListener("mousedown", startCorrespondOver);
 PIANO.addEventListener("mouseup", stopCorrespondOver);
-buttonLaters.addEventListener("click", LettersAdd);
+buttonLetters.addEventListener("click", LettersAdd);
 buttonNotes.addEventListener("click", NotesAdd);
 
 function playAudio(src) {
@@ -71,12 +71,12 @@ const buttonWrapper = document.querySelector(".btn-container");
 buttonWrapper.onclick = function (event) {
     buttonNotes.classList.remove("btn-active");
     let target = event.target;
-    highlight(target);
+    backlight(target);
 }
 
 let buttonClick;
 
-function highlight(target) {
+function backlight(target) {
     if (buttonClick) {
         buttonClick.classList.remove("btn-active");
     }
