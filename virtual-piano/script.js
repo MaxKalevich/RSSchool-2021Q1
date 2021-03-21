@@ -38,15 +38,23 @@ const startCorrespondOver = (event) => {
     });
 };
 
-const stopCorrespondOver = (event) => {
-    event.target.classList.remove("piano-key-active");
+const stopCorrespondOver = () => {
     PIANO_KEY.forEach((el) => {
-        el.removeEventListener("mouseover", startAudio, false);
+        el.classList.remove("piano-key-active");
+        el.removeEventListener("mouseover", startAudio);
         el.removeEventListener("mouseout", stopAudio);
     });
 };
 
-PIANO.addEventListener("mousedown", startCorrespondOver);
+window.addEventListener("mouseup", () => {
+    PIANO_KEY.forEach((el) => {
+        el.classList.remove("piano-key-active");
+        el.removeEventListener("mouseover", startAudio);
+        el.removeEventListener("mouseout", stopAudio);
+    });
+});
+
+PIANO.addEventListener("mousedown", startCorrespondOver, false);
 PIANO.addEventListener("mouseup", stopCorrespondOver);
 buttonLetters.addEventListener("click", LettersAdd);
 buttonNotes.addEventListener("click", NotesAdd);
