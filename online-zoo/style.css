@@ -25,7 +25,7 @@ body {
 }
 
 .main-slider {
-  background: url(../../assets/images/Rectangle32.png) no-repeat;
+  background: url(./assets/images/Rectangle32.png) no-repeat;
   background-size: cover;
 
   height: 940px;
@@ -143,7 +143,7 @@ h2 {
   border: 0;
   margin-top: 38px;
   margin-left: 210px;
-  background: url(../../assets/images/btn.svg);
+  background: url(./assets/images/btn.svg);
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -153,7 +153,7 @@ h2 {
 }
 
 .i {
-  background-image: url(../../assets/images/Frame37.png);
+  background-image: url(./assets/images/Frame37.png);
   width: 26px;
   height: 26px;
   padding: 3px;
@@ -173,8 +173,8 @@ h2 {
 .slider {
   display: flex;
   justify-content: flex-end;
-  margin-top: -100px;
-  margin-right: -260px;
+  position: relative;
+  top: -100px;
 }
 
 .eagle {
@@ -199,7 +199,7 @@ li {
   display: block;
   width: 180px;
   height: 48px;
-  top: 733px;
+  top: 233px;
   padding-left: 20px;
   font-size: 14px;
   line-height: 16px;
@@ -222,14 +222,22 @@ li {
 .fox {
   position: relative;
   top: 43px;
-  left: -110px;
+  left: 9px;
 }
 
 .navigation_slider {
   position: relative;
   float: right;
   margin-right: 365px;
-  top: -16px;
+  top: -116px;
+}
+
+.map__check-img-eagle {
+  background-image: url(./assets/images/map/red-check.png);
+}
+
+.map__check-img-eagle:hover {
+  background-image: url(./assets/images/map/red-check.png);
 }
 
 .nav_slider_p {
@@ -270,6 +278,11 @@ li {
 
 .fox_li {
   margin-left: 0;
+  width: 0px;
+}
+
+.e {
+  width: 0;
 }
 
 .content-container__how-it-works {
@@ -360,7 +373,7 @@ li {
   border-radius: 3px;
   border: 0;
   margin-top: 38px;
-  background: url(../../assets/images/btn.svg);
+  background: url(./assets/images/btn.svg);
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -370,7 +383,7 @@ li {
 }
 
 .how-it-works___i {
-  background-image: url(../../assets/images/Frame37.png);
+  background-image: url(./assets/images/Frame37.png);
   width: 26px;
   height: 26px;
   padding: 3px;
@@ -569,7 +582,7 @@ figure {
   border-radius: 3px;
   border: 0;
   margin-top: 38px;
-  background: url(../../assets/images/btn.svg);
+  background: url(./assets/images/btn.svg);
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -663,7 +676,7 @@ figure {
 }
 
 .pets-in-zoo-play {
-  background-image: url(../../assets/images/play_pets_in_zoo.svg) no-repeat;
+  background-image: url(./assets/images/play_pets_in_zoo.svg) no-repeat;
   width: 26px;
   height: 26px;
   padding: 3px;
@@ -738,7 +751,7 @@ figure {
 }
 
 .main-slider__play {
-  background-image: url(../../assets/images/play_pets_in_zoo.svg) no-repeat;
+  background-image: url(./assets/images/play_pets_in_zoo.svg) no-repeat;
   width: 26px;
   height: 26px;
   padding: 3px;
@@ -773,6 +786,25 @@ figure {
 
 .main_panda {
   width: 245px;
+  position: relative;
+  left: -61px;
+}
+
+.eagle_li {
+  position: relative;
+  left: -60px;
+}
+
+.main_gorilla {
+  width: 150px;
+  position: relative;
+  left: -60px;
+}
+
+.main_ali {
+  width: 150px;
+  position: relative;
+  left: 29px;
 }
 
 .main-slider__text-link {
@@ -851,7 +883,7 @@ figure {
   border-radius: 3px;
   border: 0;
   margin-top: 38px;
-  background: url(../../assets/images/btn.svg);
+  background: url(./assets/images/btn.svg);
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -990,7 +1022,7 @@ figure {
   border-radius: 3px;
   border: 0;
   margin-top: 38px;
-  background: url(../../assets/images/btn.svg);
+  background: url(./assets/images/btn.svg);
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -1048,7 +1080,7 @@ figure {
   border-radius: 3px;
   border: 0;
   margin-top: 38px;
-  background: url(../../assets/images/btn.svg);
+  background: url(./assets/images/btn.svg);
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -1058,7 +1090,7 @@ figure {
 }
 
 .map__i {
-  background-image: url(../../assets/images/Frame37.png);
+  background-image: url(./assets/images/Frame37.png);
   width: 26px;
   height: 26px;
   padding: 3px;
@@ -1289,7 +1321,7 @@ legend {
 .checkbox {
   margin-top: 26px;
   margin-left: 2px;
-  background: #333;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .text_checkbox {
@@ -1323,7 +1355,7 @@ legend {
 }
 
 .footer_span-arrow {
-  background-image: url(../../assets/images/Arrow4.svg);
+  background-image: url(./assets/images/Arrow4.svg);
   width: 42px;
   height: 2px;
   padding: 3px;
@@ -1384,7 +1416,7 @@ legend {
   position: relative;
   width: 20px;
   height: 121px;
-  top: -72px;
+  top: -171px;
   left: 2px;
 }
 
@@ -1561,4 +1593,8 @@ a {
   text-decoration: none;
   font-weight: 500;
   line-height: 19px;
+}
+
+.a:hover {
+  opacity: 0.4;
 }
