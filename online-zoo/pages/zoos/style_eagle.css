@@ -525,11 +525,6 @@ a {
 }
 
 li .map_nav {
-  font-weight: 900;
-  border-bottom: 1px black solid;
-}
-
-li .map_nav:hover {
   font-weight: 400;
   border-bottom: 1px white solid;
 }
@@ -582,17 +577,6 @@ li .map_nav:hover {
   align-items: flex-end;
   justify-content: space-between;
   float: left;
-}
-
-.animals__croco {
-  /*background-image: url(../../../assets/images/ellipse__active.png);
-  background-size: 138px;
-  background-position: center;*/
-  border-radius: 178px;
-  border: 3px solid #e01071;
-  width: 108px;
-  height: 108px;
-  transform: scale(1.28);
 }
 
 .pets {
@@ -704,7 +688,7 @@ li .map_nav:hover {
 }
 
 .population__text {
-  width: 126px;
+  width: 237px;
   height: 16px;
   margin-top: 6px;
   margin-left: 0;
@@ -729,9 +713,9 @@ li .map_nav:hover {
 
 .habitat__text {
   width: 380px;
-  height: 32px;
-  margin-top: 6px;
-  margin-left: 0;
+  height: 33px;
+  margin-top: 7px;
+  margin-left: -2px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -742,8 +726,8 @@ li .map_nav:hover {
 .diet {
   width: 43px;
   height: 23px;
-  margin-top: 13px;
-  margin-left: 0;
+  margin-top: 10px;
+  margin-left: -2px;
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
@@ -769,7 +753,7 @@ li .map_nav:hover {
   background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
   border-radius: 3px;
   border: 0;
-  margin-top: 35px;
+  margin-top: 52px;
 }
 
 .btn__heading {
@@ -792,6 +776,55 @@ li .map_nav:hover {
 .feed__btn:hover {
   opacity: 0.8;
   transform: scale(1.05);
+}
+
+.animals__croco {
+  border-radius: 178px;
+
+  width: 102px;
+  height: 102px;
+  transform: scale(1.28);
+}
+
+.animals__panda {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #e01071;
+  position: relative;
+  left: -13px;
+  top: 12px;
+}
+
+.animals__top-vector {
+  position: relative;
+  top: 20px;
+}
+
+.animals__bottom-vector {
+  position: relative;
+  top: -10px;
+  left: 41px;
+}
+
+.header__navigation li .zoos {
+  font-weight: 900;
+  border-bottom: 1px black solid;
+}
+
+.header__navigation li .zoos:hover {
+  font-weight: 400;
+  border-bottom: 1px white solid;
+}
+
+.header__navigation li .map_nav:hover {
+  font-weight: 900;
+  border-bottom: 1px white solid;
+}
+
+.footer__button-send:hover {
+  color: red;
+  opacity: 0.4;
 }
 
 .footer__navigation li:hover {
