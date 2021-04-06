@@ -809,3 +809,8 @@ li .map_nav:hover {
   width: 120px;
   height: 120px;
 }
+
+.footer__button-send:hover {
+  color: red;
+  opacity: 0.4;
+}

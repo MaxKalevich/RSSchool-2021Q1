@@ -457,10 +457,19 @@ li {
   height: 904px;
 }
 
+.pets-in-zoo__slider img:hover {
+  transform: scale(1.1);
+}
+
 .footer {
   background-color: #333333;
   width: 100%;
   height: 751px;
+}
+
+.footer__button-send:hover {
+  color: red;
+  opacity: 0.4;
 }
 
 .footer-logo__pictures {

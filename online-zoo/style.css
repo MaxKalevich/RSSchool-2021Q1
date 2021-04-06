@@ -174,7 +174,7 @@ h2 {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: -100px;
+  top: -7px;
 }
 
 .eagle {
@@ -229,7 +229,7 @@ li {
   position: relative;
   float: right;
   margin-right: 365px;
-  top: -116px;
+  top: -23px;
 }
 
 .map__check-img-eagle {
@@ -1416,8 +1416,25 @@ legend {
   position: relative;
   width: 20px;
   height: 121px;
-  top: -171px;
+  top: -79px;
   left: 2px;
+}
+
+.slider img:hover {
+  transform: scale(1.1);
+}
+
+.pets-in-zoo__slider img:hover {
+  transform: scale(1.1);
+}
+
+.footer__button-send:hover {
+  color: red;
+  opacity: 0.4;
+}
+
+.footer__navigation a:hover {
+  opacity: 0.4;
 }
 
 .social_footer {
@@ -1508,7 +1525,7 @@ a {
 }
 
 .main-slider__button:hover {
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 .social img:hover {
@@ -1597,4 +1614,32 @@ a {
 
 .a:hover {
   opacity: 0.4;
+}
+
+.main__button {
+  position: absolute;
+  top: 507px;
+  left: 360px;
+  width: 245px;
+  height: 55px;
+  border-radius: 3px;
+  border: 0;
+  margin-top: 38px;
+  background: url(./assets/images/btn.svg);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  line-height: 21px;
+}
+
+.content-container .main__button:hover {
+  opacity: 0.4;
+}
+
+.main-slider-block {
+  position: relative;
+  left: 620px;
+  width: 1000px;
 }
