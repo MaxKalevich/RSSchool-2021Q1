@@ -141,12 +141,13 @@
                         <input class="input_email" type="email" placeholder="Email" required>
                         <fieldset class="fieldset">
                             <legend> Please enter your message  </legend>
-                            <textarea class="textarea" maxlength="180" required>
+                            <textarea class="textarea" maxlength="280" required>
                         </textarea>
                     </fieldset>
-                    <label><input class="checkbox" type="checkbox" required>
-                        <span class="text_checkbox">I agree to the processing of Personal Data</span>
-                    </label>
+                    <div class="checkbox__footer">
+                      <input type="checkbox" id="form-checkbox" required>
+                      <label for="form-checkbox" class="checkbox-title">I agree to the processing of Personal Data</label>
+                    </div>
                     <button class="footer__button-send" type="submit">send<span class="footer_span-arrow"></span></button>
                     </form>
                 </div>

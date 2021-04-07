@@ -181,12 +181,14 @@ h2 {
   position: relative;
   top: 43px;
   left: 5px;
+  transition: .3s;
 }
 
 .panda {
   position: relative;
   top: 0px;
   left: -3px;
+  transition: .3s;
 }
 
 li {
@@ -211,18 +213,21 @@ li {
   position: relative;
   top: 43px;
   left: -3px;
+  transition: .3s;
 }
 
 .alligator {
   position: relative;
   top: 43px;
   left: -56px;
+  transition: .3s;
 }
 
 .fox {
   position: relative;
   top: 43px;
   left: 9px;
+  transition: .3s;
 }
 
 .navigation_slider {
@@ -260,6 +265,10 @@ li {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   line-height: 28px;
+}
+
+.main__slider-panda {
+  color: white;
 }
 
 .right_num {
@@ -380,6 +389,7 @@ li {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .how-it-works___i {
@@ -890,6 +900,7 @@ figure {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .testimonials {
@@ -1338,8 +1349,9 @@ legend {
 
 .footer__button-send {
   display: block;
-  padding-left: 260px;
-  padding-top: 17px;
+  position: relative;
+  top: 40px;
+  left: 250px;
   width: 108px;
   height: 16px;
   background: #333;
@@ -1362,8 +1374,8 @@ legend {
   display: inline-block;
   line-height: 21px;
   position: relative;
-  top: -17px;
-  right: -61px;
+  top: 0px;
+  right: -15px;
 }
 
 .footer__main {
@@ -1522,6 +1534,7 @@ a {
 
 .how-it-works__button:hover {
   opacity: 0.3;
+  transform: scale(1.1);
 }
 
 .main-slider__button:hover {
@@ -1564,7 +1577,8 @@ a {
 }
 
 .pay-and-feed__button:hover {
-  opacity: 0.4;
+  opacity: 0.8;
+  transform: scale(1.1)
 }
 
 .testimonials__button:hover {
@@ -1632,14 +1646,87 @@ a {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .content-container .main__button:hover {
-  opacity: 0.4;
+  opacity: 0.8;
+  transform: scale(1.1)
 }
 
 .main-slider-block {
   position: relative;
   left: 620px;
   width: 1000px;
+}
+
+#form-checkbox {
+  display: none;
+}
+
+.checkbox-title:before {
+  content: " ";
+  color: #4bd8b5;
+  display: inline-block;
+  margin-right: 6px;
+  margin-left: 2px;
+  text-align: center;
+  width: 12px;
+  text-indent: 0px;
+  height: 12px;
+  background: #333;
+  border: 1px solid #bdbdbd;
+  border-image: initial;
+  vertical-align: middle;
+  border-radius: 1px;
+}
+
+input:checked + label:before {
+  content: "Y";
+}
+
+.checkbox__footer {
+  position: relative;
+  top: 25px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.hr {
+  margin-top: 74px;
+}
+
+.panda_output {
+  
+  position: relative;
+    left: 493px;
+    top: -18px;
+}
+
+.panda_slider {
+  margin-top: 11px;
+  position: relative;
+      left: 351px;
+    top: 10px;
+  -webkit-appearance: none;
+  width: 245px;
+  height: 5px;
+  background: rgba(189, 189, 189, 0.57);
+  outline: none;
+  /* opacity: 0.7; */
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.panda_slider:hover {
+  opacity: .7;
+}
+
+.panda_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 10px;
+  background: #FEFEFE;
+  cursor: pointer;
 }

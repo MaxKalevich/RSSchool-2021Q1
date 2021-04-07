@@ -43,7 +43,7 @@
                   <a class="link__panda" href="./panda.html">
                     <img src="../../assets/images/map/panda-map.png" title="panda" alt="panda" class="animals__panda pets">
                   </a>
-                  <a class="link__eagle" href="#">
+                  <a class="link__eagle" href="./eagle.html">
                     <img src="../../assets/images/map/eagle-map.png" title="eagle" alt="eagle" class="animals__eagle pets">
                   </a>
                   <a class="link__croco" href="./alligator.html">
@@ -141,12 +141,13 @@
                         <input class="input_email" type="email" placeholder="Email" required>
                         <fieldset class="fieldset">
                             <legend> Please enter your message  </legend>
-                            <textarea class="textarea" maxlength="180" required>
+                            <textarea class="textarea" maxlength="280" required>
                         </textarea>
                     </fieldset>
-                    <label><input class="checkbox" type="checkbox" required>
-                        <span class="text_checkbox">I agree to the processing of Personal Data</span>
-                    </label>
+                    <div class="checkbox__footer">
+                        <input type="checkbox" id="form-checkbox" required>
+                        <label for="form-checkbox" class="checkbox-title">I agree to the processing of Personal Data</label>
+                      </div>
                     <button class="footer__button-send" type="submit">send<span class="footer_span-arrow"></span></button>
                     </form>
                 </div>

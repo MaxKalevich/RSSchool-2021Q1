@@ -52,14 +52,10 @@
             <li class="main_ali"><a class="alligator__link" href ="./pages/zoos/alligator.html"><img class="alligator" src="./assets/images/Rectangle17.png"></a></li>
             <li class="fox_li"><a class="e" href ="#"><img class="fox" src="./assets/images/Rectangle18.png"></a></li>
         </ul>
-    <div class="navigation_slider">
-        <div class="number__slider">
-            <span class="left_num">02/</span><span class="right_num">08</span>
-    </div>
-            <div class="nav_slider_p"></div>
-            <div class="number-slider__link"></div>
-    </div>    
-    </div>
+    <div class="main__slider-panda">
+  <output class="panda_output" for="fader" id="volume"><span class="left_num">02/</span><span class="right_num">08</span></output>
+  <input class="panda_slider" type="range" id="fader" min="01" max="08" value="02" step="1" oninput="outputUpdate(value)">
+</div>
     <aside>
         <ul class="social">
             <li><a href="#"><img src="./assets/images/instagram1.svg"></a></li>
@@ -285,12 +281,13 @@
                     <input class="input_email" type="email" placeholder="Email" required>
                     <fieldset class="fieldset">
                         <legend> Please enter your message  </legend>
-                        <textarea class="textarea" maxlength="180" required>
+                        <textarea class="textarea" maxlength="280" required>
                     </textarea>
                 </fieldset>
-                <label><input class="checkbox" type="checkbox" required>
-                    <span class="text_checkbox">I agree to the processing of Personal Data</span>
-                </label>
+                <div class="checkbox__footer">
+  <input type="checkbox" id="form-checkbox" required>
+  <label for="form-checkbox" class="checkbox-title">I agree to the processing of Personal Data</label>
+</div>
                 <button class="footer__button-send" type="submit">send<span class="footer_span-arrow"></span></button>
                 </form>
             </div>
