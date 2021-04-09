@@ -76,11 +76,6 @@ body {
   line-height: 18px;
 }
 
-.map_nav span:hover {
-  border-bottom: 1px white solid;
-  font-weight: 500;
-  line-height: 19px;
-}
 
 .zoos {
   font-weight: 400;
@@ -785,10 +780,6 @@ li .map_nav {
   border-bottom: 1px black solid;
 }
 
-li .map_nav:hover {
-  font-weight: 400;
-  border-bottom: 1px white solid;
-}
 
 .about,
 .map_nav,
@@ -808,12 +799,10 @@ li .map_nav:hover {
 
 .header__navigation a:hover {
   font-weight: 900;
+  border-bottom: 1px solid black;
 }
 
-.header__navigation li .map_nav:hover {
-  font-weight: 400;
-  text-decoration: none;
-}
+
 
 .arrow-left_img:hover {
   opacity: 0.4;
