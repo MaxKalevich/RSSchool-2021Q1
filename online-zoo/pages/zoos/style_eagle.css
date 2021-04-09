@@ -918,7 +918,7 @@ input:checked + label:before {
       border-radius: 50%;
       background-color: #C4C4C4;
       }
-
+ 
       .slider-btn {
         position: relative;
         top: -150px;

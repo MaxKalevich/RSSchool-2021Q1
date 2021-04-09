@@ -902,7 +902,7 @@ input:checked + label:before {
   border-radius: 50%;
   background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
   }
-  
+   
   .slider-btn_2 {
     position: relative;
     width: 8px;
