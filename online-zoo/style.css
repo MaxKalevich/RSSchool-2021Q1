@@ -84,11 +84,6 @@ body {
   line-height: 19px;
 }
 
-.about span:hover {
-  border-bottom: 1px white solid;
-  font-weight: 500;
-  line-height: 19px;
-}
 
 .zoos {
   font-weight: 500;
@@ -238,11 +233,21 @@ li {
 }
 
 .map__check-img-eagle {
-  background-image: url(./assets/images/map/red-check.png);
+  background-image: url(./assets/images/check.svg);
+    padding: 38px;
+    padding-left: 0px;
+    width: 29px;
+    height: 17px;
+    display: block;
 }
 
 .map__check-img-eagle:hover {
   background-image: url(./assets/images/map/red-check.png);
+    padding: 38px;
+    padding-left: 0px;
+    width: 29px;
+    height: 17px;
+    display: block;
 }
 
 .nav_slider_p {
@@ -1084,7 +1089,7 @@ figure {
 
 .map__button {
   position: relative;
-  top: -492px;
+  top: -382px;
   left: 686px;
   width: 245px;
   height: 55px;
@@ -1126,46 +1131,49 @@ figure {
 
 .map__img-eagle {
   position: relative;
-  top: -465px;
-  left: 272px;
+  top: -23px;
+  left: 12px;
 }
 
 .map__check-kroko {
-  position: relative;
-  top: -428px;
-  left: 350px;
+  background-image: url(./assets/images/check.svg);
+    padding: 63px;
+    padding-top: 14px;
+    padding-left: 4px;
+    position: relative;
+    top: -376px;
+    left: 350px;
+    width: 0px;
+    height: 17px;
+    display: inline-block;
+}
+
+.map__check-kroko:hover {
+  background-image: url(./assets/images/map/red-check.png);
+    padding: 63px;
+    padding-top: 14px;
+    padding-left: 4px;
+    position: relative;
+    top: -376px;
+    left: 350px;
+    width: 0px;
+    height: 17px;
+    display: inline-block;
 }
 
 .map__kroko {
   position: relative;
-  top: -465px;
-  left: 292px;
+  top: 0;
+  left: 7px;
 }
 
 .kroko {
   position: relative;
-  top: -71px;
+  top: -116px;
   left: 104px;
 }
 
-.map__check-gorilla {
-  position: relative;
-  top: -428px;
-  left: 350px;
-}
 
-.map__gorilla {
-  position: relative;
-  top: -512px;
-  left: 363px;
-}
-
-.gorilla-check {
-  position: relative;
-  top: -82px;
-  left: 431px;
-  width: 100px;
-}
 
 .map__check-panda {
   position: relative;
@@ -1613,6 +1621,11 @@ a {
 
 .header__navigation a:hover {
   font-weight: 900;
+  text-decoration: underline;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .social_footer:hover {
@@ -1620,11 +1633,6 @@ a {
   color: red;
 }
 
-.about span:hover {
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 19px;
-}
 
 .a:hover {
   opacity: 0.4;
@@ -1729,4 +1737,117 @@ input:checked + label:before {
   height: 10px;
   background: #FEFEFE;
   cursor: pointer;
+}
+
+
+
+panda_2:hover {
+  width: 130px;
+  height: 130px;
+  background-color: #2196F3;
+  transition: background-color 1s linear;
+}
+
+.map__check-img-eagle {
+  position: relative;
+  top: -428px;
+  left: 331px;
+}
+
+
+
+
+
+
+
+.map__check-gorilla:hover {
+  background-image: url("./assets/images/map/red-check.png");
+  padding: 38px;
+  padding-left: 29px;
+  position: relative;
+  top: -157px;
+    left: 175px;
+}
+
+
+
+.kroko:hover {
+
+}
+
+.gorilla-check {
+  position: relative;
+  top: -82px;
+  left: 431px;
+  width: 100px;
+}
+
+
+
+
+.map__check-gorilla {
+  background-image: url(./assets/images/check.svg);
+  padding: 38px;
+  padding-left: 29px;
+  position: relative;
+  top: -417px;
+  left: 348px;
+  display: block;
+  width: 0px;
+  height: 18px;
+}
+
+.map__check-gorilla:hover {
+  background-image: url(./assets/images/map/red-check.png);
+  padding: 38px;
+  padding-left: 29px;
+  position: relative;
+  top: -417px;
+  left: 348px;
+  display: block;
+  width: 0px;
+  height: 18px;
+}
+
+.map__gorilla {
+  position: relative;
+  top: -24px;
+    left: -16px;
+}
+.map__panda {
+  position: relative;
+  top: -24px;
+  left: -16px;
+}
+
+
+.map__check-panda {
+  background-image: url(./assets/images/check.svg);
+  padding: 38px;
+  padding-left: 29px;
+  position: relative;
+  top: -667px;
+  left: 1104px;
+  display: block;
+  width: 0px;
+  height: 18px;
+}
+
+.map__check-panda:hover {
+  background-image: url(./assets/images/map/red-check.png);
+
+  padding: 38px;
+  padding-left: 29px;
+  position: relative;
+  top: -667px;
+  left: 1104px;
+  display: block;
+  width: 0px;
+  height: 18px;
+}
+
+.panda-check {
+  position: relative;
+  top: -24px;
+    left: 0px;
 }

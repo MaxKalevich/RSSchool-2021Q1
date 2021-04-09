@@ -591,7 +591,7 @@ li .map_nav {
   background-position: center;*/
   border-radius: 178px;
   border: 3px solid #e01071;
-  transform: scale(1.28);
+  transform: scale(1.2);
 }
 
 .animals__top-vector {
@@ -779,14 +779,6 @@ li .map_nav {
   transform: scale(1.05);
 }
 
-.animals__croco {
-  border-radius: 178px;
-
-  width: 102px;
-  height: 102px;
-  transform: scale(1.28);
-}
-
 .animals__panda {
   width: 130px;
   height: 130px;
@@ -813,10 +805,6 @@ li .map_nav {
   border-bottom: 1px black solid;
 }
 
-.header__navigation li .zoos:hover {
-  font-weight: 400;
-  border-bottom: 1px white solid;
-}
 
 .header__navigation li .map_nav:hover {
   font-weight: 900;
@@ -869,3 +857,62 @@ input:checked + label:before {
 .hr {
   margin-top: 74px;
 }
+
+.about:active {
+  line-height: 18px; 
+  font-weight: 500;
+}
+
+.about:hover {
+  font-family: "Roboto", sans-serif;
+  line-height: 18px; 
+  font-weight: 500;
+}
+
+
+.slider-btn_1 {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  left: 587px;
+  top: 34px;
+  border-radius: 50%;
+  background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+  }
+  
+  .slider-btn_2 {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    left: 602px;
+      top: 24px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    }
+  
+    .slider-btn_3 {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      left: 615px;
+      top: 16px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+      }
+
+      .slider-btn {
+        position: relative;
+        top: -150px;
+      }
+
+      .slider-btn_1:hover {
+        cursor: pointer;
+      }
+  
+      .slider-btn_2:hover {
+        cursor: pointer;
+      }
+  
+      .slider-btn_3:hover {
+        cursor: pointer;
+      }
