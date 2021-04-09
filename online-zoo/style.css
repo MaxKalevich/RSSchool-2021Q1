@@ -84,7 +84,15 @@ body {
   line-height: 19px;
 }
 
+<<<<<<< HEAD
 
+=======
+.about span:hover {
+  border-bottom: 1px white solid;
+  font-weight: 500;
+  line-height: 19px;
+}
+>>>>>>> online-zoo
 
 .zoos {
   font-weight: 500;
@@ -234,21 +242,28 @@ li {
 }
 
 .map__check-img-eagle {
+<<<<<<< HEAD
   background-image: url(./assets/images/check.svg);
     padding: 38px;
     padding-left: 0px;
     width: 29px;
     height: 17px;
     display: block;
+=======
+  background-image: url(./assets/images/map/red-check.png);
+>>>>>>> online-zoo
 }
 
 .map__check-img-eagle:hover {
   background-image: url(./assets/images/map/red-check.png);
+<<<<<<< HEAD
     padding: 38px;
     padding-left: 0px;
     width: 29px;
     height: 17px;
     display: block;
+=======
+>>>>>>> online-zoo
 }
 
 .nav_slider_p {
@@ -1090,7 +1105,11 @@ figure {
 
 .map__button {
   position: relative;
+<<<<<<< HEAD
   top: -382px;
+=======
+  top: -492px;
+>>>>>>> online-zoo
   left: 686px;
   width: 245px;
   height: 55px;
@@ -1132,6 +1151,7 @@ figure {
 
 .map__img-eagle {
   position: relative;
+<<<<<<< HEAD
   top: -23px;
   left: 12px;
 }
@@ -1160,21 +1180,61 @@ figure {
     width: 0px;
     height: 17px;
     display: inline-block;
+=======
+  top: -465px;
+  left: 272px;
+}
+
+.map__check-kroko {
+  position: relative;
+  top: -428px;
+  left: 350px;
+>>>>>>> online-zoo
 }
 
 .map__kroko {
   position: relative;
+<<<<<<< HEAD
   top: 0;
   left: 7px;
+=======
+  top: -465px;
+  left: 292px;
+>>>>>>> online-zoo
 }
 
 .kroko {
   position: relative;
+<<<<<<< HEAD
   top: -116px;
   left: 104px;
 }
 
 
+=======
+  top: -71px;
+  left: 104px;
+}
+
+.map__check-gorilla {
+  position: relative;
+  top: -428px;
+  left: 350px;
+}
+
+.map__gorilla {
+  position: relative;
+  top: -512px;
+  left: 363px;
+}
+
+.gorilla-check {
+  position: relative;
+  top: -82px;
+  left: 431px;
+  width: 100px;
+}
+>>>>>>> online-zoo
 
 .map__check-panda {
   position: relative;
@@ -1622,11 +1682,14 @@ a {
 
 .header__navigation a:hover {
   font-weight: 900;
+<<<<<<< HEAD
   text-decoration: underline;
 }
 
 button:hover {
   cursor: pointer;
+=======
+>>>>>>> online-zoo
 }
 
 .social_footer:hover {
@@ -1634,7 +1697,15 @@ button:hover {
   color: red;
 }
 
+<<<<<<< HEAD
 
+=======
+.about span:hover {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 19px;
+}
+>>>>>>> online-zoo
 
 .a:hover {
   opacity: 0.4;
@@ -1739,6 +1810,7 @@ input:checked + label:before {
   height: 10px;
   background: #FEFEFE;
   cursor: pointer;
+<<<<<<< HEAD
 }
 
 
@@ -1852,4 +1924,6 @@ panda_2:hover {
   position: relative;
   top: -24px;
     left: 0px;
+=======
+>>>>>>> online-zoo
 }

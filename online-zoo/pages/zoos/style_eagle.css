@@ -810,7 +810,14 @@ li .map_nav {
   border-bottom: 1px black solid;
 }
 
+<<<<<<< HEAD
 
+=======
+.header__navigation li .zoos:hover {
+  font-weight: 400;
+  border-bottom: 1px white solid;
+}
+>>>>>>> online-zoo
 
 .header__navigation li .map_nav:hover {
   font-weight: 900;
@@ -880,6 +887,7 @@ input:checked + label:before {
   top: -2px;
   right: -21px;
 }
+<<<<<<< HEAD
 
 .slider-btn_1 {
   position: relative;
@@ -927,3 +935,5 @@ input:checked + label:before {
       .slider-btn_3:hover {
         cursor: pointer;
       }
+=======
+>>>>>>> online-zoo

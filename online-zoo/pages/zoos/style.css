@@ -77,6 +77,7 @@ body {
   line-height: 18px;
 }
 
+<<<<<<< HEAD
 
 
 .zoos {
@@ -88,6 +89,19 @@ body {
 
 
 
+=======
+.map_nav span:hover {
+  border-bottom: 1px white solid;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.zoos {
+  font-weight: 400;
+  line-height: 19px;
+}
+
+>>>>>>> online-zoo
 .map_nav,
 .contact_us,
 .design {
@@ -525,11 +539,22 @@ a {
 }
 
 li .map_nav {
+<<<<<<< HEAD
   font-weight: 400;
   
 }
 
 
+=======
+  font-weight: 900;
+  border-bottom: 1px black solid;
+}
+
+li .map_nav:hover {
+  font-weight: 400;
+  border-bottom: 1px white solid;
+}
+>>>>>>> online-zoo
 
 .about,
 .map_nav,
@@ -552,7 +577,11 @@ li .map_nav {
 }
 
 .header__navigation li .map_nav:hover {
+<<<<<<< HEAD
   font-weight: 900;
+=======
+  font-weight: 400;
+>>>>>>> online-zoo
   text-decoration: none;
 }
 
@@ -832,6 +861,7 @@ input:checked + label:before {
 .hr {
   margin-top: 74px;
 }
+<<<<<<< HEAD
 
 li .map_nav:hover {
   font-weight: 900;
@@ -883,3 +913,5 @@ background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
     .slider-btn_3:hover {
       cursor: pointer;
     }
+=======
+>>>>>>> online-zoo

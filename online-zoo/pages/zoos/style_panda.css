@@ -587,9 +587,16 @@ li .map_nav:hover {
 
 .animals__croco {
   border-radius: 178px;
+<<<<<<< HEAD
   width: 78px;
   height: 78px;
   transform: scale(1.2);
+=======
+
+  width: 78px;
+  height: 78px;
+  transform: scale(1.28);
+>>>>>>> online-zoo
 }
 
 .pets {
@@ -600,7 +607,11 @@ li .map_nav:hover {
 .pets:hover {
   border-radius: 178px;
   border: 3px solid #e01071;
+<<<<<<< HEAD
   transform: scale(1.2);
+=======
+  transform: scale(1.28);
+>>>>>>> online-zoo
 }
 
 .animals__top-vector {
@@ -841,7 +852,14 @@ li .map_nav:hover {
   border-bottom: 1px black solid;
 }
 
+<<<<<<< HEAD
 
+=======
+.header__navigation li .zoos:hover {
+  font-weight: 400;
+  border-bottom: 1px white solid;
+}
+>>>>>>> online-zoo
 
 .header__navigation li .map_nav:hover {
   font-weight: 900;
@@ -899,6 +917,7 @@ input:checked + label:before {
 .hr {
   margin-top: 74px;
 }
+<<<<<<< HEAD
 
 .slider-btn_1 {
   position: relative;
@@ -946,3 +965,5 @@ input:checked + label:before {
       .slider-btn_3:hover {
         cursor: pointer;
       }
+=======
+>>>>>>> online-zoo
