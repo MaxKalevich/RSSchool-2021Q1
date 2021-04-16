@@ -328,19 +328,20 @@ li {
 }
 
 .how-it-works__img {
+  background-image: url(./assets/images/Rectangle36.png);
   width: 790px;
   height: 323px;
-  padding-left: 414px;
-  padding-top: 28px;
+  padding-left: 790px;
+  padding-top: 305px;
+  position: relative;
+  top: 334px;
+  left: 414px;
 }
-
 .how-it-works__slider {
   float: right;
-
   margin-right: 688px;
-  margin-top: 25px;
+  margin-top: 361px;
 }
-
 .how-it-works__slider-p {
   position: relative;
   border-bottom: 10px #333333 solid;
@@ -546,6 +547,14 @@ figure {
   padding-left: 210px;
   padding-top: 1px;
   box-sizing: border-box;
+}
+
+.eagle_2 {
+  background-image: url(./assets/images/Rectangle10.png);
+  padding-left: 277px;
+  padding-bottom: 382px;
+  position: relative;
+  top: 0px;
 }
 
 .panda_2,
@@ -952,20 +961,30 @@ figure {
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
 }
 
+.testimonials-user1 {
+  position: relative;
+  top: 82px;
+  left: 267px;
+}
+
 .testimonials__img1 {
-  padding-left: 266px;
-  padding-top: 56px;
+  background-image: url(./assets/images/user1.svg);
+  padding-left: 50px;
+  padding-top: 31px;
 }
 
 .testimonials__img2 {
+  background-image: url(./assets/images/circular.svg);
   position: relative;
-  top: 10px;
-  left: -62px;
+  top: -36px;
+  padding-left: 68px;
+  padding-bottom: 50px;
+  left: -61px;
 }
 
 .testimonials__heading2 {
   padding-left: 217px;
-  padding-top: 23px;
+  padding-top: 113px;
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
@@ -1855,4 +1874,12 @@ panda_2:hover {
   padding-left: 108px;
   padding-top: 0px;
   margin-top: 116px;
+}
+
+.button-menu {
+  background-image: url(./assets/images/menu.svg);
+  padding-left: 40px;
+  padding-bottom: 0px;
+  height: 21px;
+  display: none;
 }

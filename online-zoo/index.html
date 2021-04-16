@@ -5,6 +5,8 @@
     <title>online-zoo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style_1200.css">
+    <link rel="stylesheet" href="style_640.css">
+    <link rel="stylesheet" href="style_320.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
@@ -31,6 +33,8 @@
         <button class="navigation__btn">
             <div class="cirle"></div>
         </button>
+        <a class="button-menu">
+        </a>
     </div>
 </header>
 <main class="main-slider">
@@ -81,7 +85,7 @@
         wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species 
         and their habitat.
     </p>
-    <img class="how-it-works__img" src="./assets/images/Rectangle36.png" alt="picture">
+    <a class="how-it-works__img"></a>
     <div class="how-it-works__slider">
         <div class="how-it-works__slider-num">
             <span class="how-it-works__left-num">01/</span><span class="how-it-works__right-num">04</span>
@@ -142,8 +146,8 @@
                </span>
             <a class="pets-in-zoo__link-panda" href="pages/zoos/panda.html"><span class="pets-in-zoo-play"><img class="img_pets-in-zoo" src="./assets/images/play_pets_in_zoo1.svg"></span><span class="text-link">watch online</span></a>
             <a class="pets-in-zoo__link-panda"><span class="pets-in-zoo-play"><img class="img_pets-in-zoo" src="./assets/images/dollar.svg"></span><span class="text-link__pets-in-zoo">donate</span></a></li>
-               <li><a><img class="eagle_2" src="./assets/images/Rectangle10.png"></a></li>
-               <li><a><img class="gorilla_2" src="./assets/images/Rectangle11.png"></a></li>
+               <li><a class="eagle_2"></a></li>
+               <li><a class="gorilla_640"><img class="gorilla_2" src="./assets/images/Rectangle11.png"></a></li>
                <li><a><img class="alligator_2" src="./assets/images/Rectangle12.png"></a></li>
            </ul>
            <div class="arrow_right">
@@ -188,7 +192,7 @@
         <figcaption></figcaption>
     </figure>
     <figure>
-        <img src="./assets/images/light_4.svg" alt="">
+        <img class="img_640" src="./assets/images/light_4.svg" alt="">
         <figcaption></figcaption>
     </figure>
 </div>
@@ -203,8 +207,10 @@
         </div>
         <div class="testimonials__blog">
             <div class="testimonials__blog--left">
-                <img class="testimonials__img1" src="./assets/images/user1.svg" alt="">
-                <img class="testimonials__img2" src="./assets/images/circular.svg" alt="">
+                <div class="testimonials-user1">
+                    <a class="testimonials__img1"></a>
+                    <a class="testimonials__img2"></a>
+                </div>
                 <h2 class="testimonials__heading2">Nastya Sidorova</h2>
                 <p class="testimonials__paragraph">
                     As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.
@@ -278,7 +284,7 @@
                 <h2 class="footer__heading">
                     Contact us
                 </h2>
-                <form action="#">
+                <form class="form-footer" action="#">
                     <input class="input_first" type="text" placeholder="Name" required>
                     <input class="input_email" type="email" placeholder="Email" required>
                     <fieldset class="fieldset">
