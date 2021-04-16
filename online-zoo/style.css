@@ -328,19 +328,20 @@ li {
 }
 
 .how-it-works__img {
+  background-image: url(./assets/images/Rectangle36.png);
   width: 790px;
   height: 323px;
-  padding-left: 414px;
-  padding-top: 28px;
+  padding-left: 790px;
+  padding-top: 305px;
+  position: relative;
+  top: 334px;
+  left: 414px;
 }
-
 .how-it-works__slider {
   float: right;
-
   margin-right: 688px;
-  margin-top: 25px;
+  margin-top: 361px;
 }
-
 .how-it-works__slider-p {
   position: relative;
   border-bottom: 10px #333333 solid;
@@ -517,7 +518,7 @@ li {
 }
 
 figure {
-  height: 181px;
+  height: 16px;
 }
 
 .what-we-believe-in {
@@ -546,6 +547,14 @@ figure {
   padding-left: 210px;
   padding-top: 1px;
   box-sizing: border-box;
+}
+
+.eagle_2 {
+  background-image: url(./assets/images/Rectangle10.png);
+  padding-left: 277px;
+  padding-bottom: 382px;
+  position: relative;
+  top: 0px;
 }
 
 .panda_2,
@@ -802,18 +811,21 @@ figure {
 .main_panda {
   width: 245px;
   position: relative;
-  left: -61px;
+  left: -24px;
 }
 
 .eagle_li {
   position: relative;
-  left: -60px;
+  left: -23px;
 }
 
 .main_gorilla {
-  width: 150px;
+  background-image: url(./assets/images/Rectangle16.png);
+  width: 187px;
+  height: 250px;
   position: relative;
-  left: -60px;
+  left: -26px;
+  top: 44px;
 }
 
 .main_ali {
@@ -885,13 +897,9 @@ figure {
   padding-top: 90px;
 }
 
-.pay-and-feed__arrow {
-  padding-top: 116px;
-}
-
 .pay-and-feed__button {
   position: relative;
-  top: -29px;
+  top: 136px;
   left: 686px;
   width: 245px;
   height: 55px;
@@ -953,20 +961,30 @@ figure {
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
 }
 
+.testimonials-user1 {
+  position: relative;
+  top: 82px;
+  left: 267px;
+}
+
 .testimonials__img1 {
-  padding-left: 266px;
-  padding-top: 56px;
+  background-image: url(./assets/images/user1.svg);
+  padding-left: 50px;
+  padding-top: 31px;
 }
 
 .testimonials__img2 {
+  background-image: url(./assets/images/circular.svg);
   position: relative;
-  top: 10px;
-  left: -62px;
+  top: -36px;
+  padding-left: 68px;
+  padding-bottom: 50px;
+  left: -61px;
 }
 
 .testimonials__heading2 {
   padding-left: 217px;
-  padding-top: 23px;
+  padding-top: 113px;
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
@@ -1706,17 +1724,16 @@ input:checked + label:before {
 }
 
 .panda_output {
-  
   position: relative;
-    left: 493px;
-    top: -18px;
+  left: 487px;
+  top: -23px;
 }
 
 .panda_slider {
   margin-top: 11px;
   position: relative;
-      left: 351px;
-    top: 10px;
+  left: 334px;
+  top: 1px;
   -webkit-appearance: none;
   width: 245px;
   height: 5px;
@@ -1850,4 +1867,19 @@ panda_2:hover {
   position: relative;
   top: -24px;
     left: 0px;
+}
+
+.pay-and-feed__arrow {
+  background-image: url(./assets/images/Arrow2.svg);
+  padding-left: 108px;
+  padding-top: 0px;
+  margin-top: 116px;
+}
+
+.button-menu {
+  background-image: url(./assets/images/menu.svg);
+  padding-left: 40px;
+  padding-bottom: 0px;
+  height: 21px;
+  display: none;
 }
