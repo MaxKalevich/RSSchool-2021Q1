@@ -1,3 +1,4 @@
+@media screen and (max-width: 1901px) {
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
 
 .page {
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .content-container {
@@ -47,7 +49,6 @@ body {
   background-size: cover;
   background-position: center;
   height: 940px;
-
 }
 .wrapper {
   margin: 0 auto;
@@ -190,7 +191,7 @@ h2 {
 .slider {
   display: flex;
   margin-left: 30px;
-  width: 972px;
+  width: 331px;
   position: relative;
   top: -115px;
 }
@@ -603,7 +604,12 @@ figure {
   top: 0px;
   transition: .3s;
 }
-
+.pets-in-zoo__slider li:nth-child(2) {
+  transition: .3s;
+}
+.pets-in-zoo__slider li:nth-child(2):hover {
+  transform: scale(1.1);
+}
 .panda_2, .eagle_2, .gorilla_2, .alligator_2 {
   width: 278px;
   height: 399px;
@@ -658,6 +664,7 @@ figure {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .pets-in-zoo__a {
@@ -1129,7 +1136,6 @@ figure {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
-  transition: .3s;
 }
 
 .testimonials__slider-p {
@@ -1149,7 +1155,9 @@ figure {
   line-height: 16px;
 }
 .map-wrap {
-  width: 1400px;
+  position: relative;
+  left: -59px;
+  width: 1279px;
   margin: 0 auto;
 }
 .map {
@@ -1190,6 +1198,7 @@ figure {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .map__i {
@@ -1286,10 +1295,11 @@ figure {
 
 .map2 {
   height: 904px;
+  width: 1277px;
 }
 
 .footer-wrap {
-  width: 1623px;
+  width: 1290px;
   margin: 0 auto;
 }
 
@@ -1298,6 +1308,12 @@ figure {
   width: 100%;
   height: 751px;
   background-size: 100%;
+}
+
+.zoo-online-centre {
+  position: relative;
+  left: -113px;
+  width: 400px;
 }
 
 .footer-logo__pictures {
@@ -1309,7 +1325,7 @@ figure {
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-top: 78px;
-  padding-left: 252px;
+  padding-left: 371px;
   width: 404px;
 }
 
@@ -1338,7 +1354,9 @@ figure {
   display: inline-block;
   width: 275px;
   height: 55px;
-  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  background: linear-gradient( 
+106.89deg
+, #4bd8b5 -14.32%, #49d6df 100.68%);
   border-radius: 3px;
   text-transform: uppercase;
   outline: none;
@@ -1348,6 +1366,9 @@ figure {
   line-height: 21px;
   border: 0;
   margin-top: 99px;
+  position: relative;
+  top: 378px;
+  left: -241px;
   transition: .3s;
 }
 
@@ -1487,6 +1508,7 @@ legend {
 .footer__main {
   display: flex;
   justify-content: space-between;
+  height: 250px;
 }
 
 .zoo-online-centre__heading {
@@ -1496,8 +1518,7 @@ legend {
   line-height: 16px;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  padding-right: 540px;
-  padding-right: 659px;
+width: 200px;
   padding-top: 54px;
   color: #fefefe;
 }
@@ -1507,13 +1528,14 @@ legend {
 .zoo-online-centre-info3,
 .zoo-online-centre-info4 {
   display: block;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  font-family: "Roboto", sans-serif;
-  color: #fefefe;
-  padding-top: 35px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #fefefe;
+    padding-top: 35px;
+    width: 300px;
 }
 
 .zoo-online-centre-info2 {
@@ -1573,7 +1595,7 @@ a {
 
 .hr {
   border-bottom: 1px #bdbdbd solid;
-  width: 1623.04px;
+  width: 1278px;
   margin-top: 74px;
 }
 
@@ -1607,7 +1629,7 @@ a {
   top: 89px;
 }
 .main-slider-block {
-  width: 1000px;
+  width: 361px;
   margin-left: 918px;
 }
 .circ_line {
@@ -1637,7 +1659,6 @@ a {
 }
 
 .how-it-works__button:hover {
-  opacity: 0.3;
   transform: scale(1.1);
 }
 
@@ -1648,9 +1669,7 @@ a {
 .social img:hover {
   opacity: 0.4;
 }
-.eagle_2:hover {
-  transform: scale(1.1);
-}
+
 .nav_slider_p:hover {
   position: relative;
   border-bottom: 10px #4bd8b5 solid;
@@ -1716,7 +1735,9 @@ a {
   position: absolute;
   display: none;
 }
-
+.eagle_2:hover {
+  transform: scale(1.1);
+}
 .header__navigation a:hover {
   font-weight: 900;
   text-decoration: underline;
@@ -1796,7 +1817,7 @@ input:checked + label:before {
 }
 
 .hr {
-  margin-top: 101px;
+  margin-top: 229px;
 }
 
 .panda_output {
@@ -1830,7 +1851,6 @@ input:checked + label:before {
   background: #FEFEFE;
   cursor: pointer;
 }
-
 
 .map__check-img-eagle {
   position: relative;
@@ -1946,4 +1966,5 @@ input:checked + label:before {
   padding-bottom: 0px;
   height: 21px;
   display: none;
+}
 }
