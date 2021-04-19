@@ -7,12 +7,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+ 
 .page {
-  min-width: 1920px;
+  width: 1920px;
   margin: 0 auto;
 }
-
+ 
 .content-container {
   margin: 0 auto;
   width: 1620px;
@@ -76,15 +76,6 @@ body {
   line-height: 18px;
 }
 
-<<<<<<< HEAD
-
-=======
-.map_nav span:hover {
-  border-bottom: 1px white solid;
-  font-weight: 500;
-  line-height: 19px;
-}
->>>>>>> online-zoo
 
 .zoos {
   font-weight: 400;
@@ -267,7 +258,7 @@ li {
   font-weight: 900;
   color: #bdbdbd;
   line-height: 16px;
-} 
+}
 
 .pets-in-zoo__slider-link {
   border-bottom: 5px rgba(189, 189, 189, 0.57) solid;
@@ -463,10 +454,6 @@ li {
 
 .pets-in-zoo__slider img:hover {
   transform: scale(1.1);
-<<<<<<< HEAD
-
-=======
->>>>>>> online-zoo
 }
 
 .footer {
@@ -793,14 +780,6 @@ li .map_nav {
   border-bottom: 1px black solid;
 }
 
-<<<<<<< HEAD
-
-=======
-li .map_nav:hover {
-  font-weight: 400;
-  border-bottom: 1px white solid;
-}
->>>>>>> online-zoo
 
 .about,
 .map_nav,
@@ -820,19 +799,10 @@ li .map_nav:hover {
 
 .header__navigation a:hover {
   font-weight: 900;
-<<<<<<< HEAD
   border-bottom: 1px solid black;
 }
 
 
-=======
-}
-
-.header__navigation li .map_nav:hover {
-  font-weight: 400;
-  text-decoration: none;
-}
->>>>>>> online-zoo
 
 .arrow-left_img:hover {
   opacity: 0.4;
@@ -841,3 +811,4 @@ li .map_nav:hover {
 .arrow-right_img:hover {
   opacity: 0.4;
 }
+

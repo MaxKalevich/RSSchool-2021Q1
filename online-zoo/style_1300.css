@@ -1,6 +1,8 @@
+@media screen and (max-width: 1901px) {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,13 +11,14 @@ body {
 }
 
 .page {
-  min-width: 1920px;
   margin: 0 auto;
-} 
+  overflow-x: hidden;
+}
 
 .content-container {
+  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
-  width: 1620px;
 }
 
 .header {
@@ -23,20 +26,38 @@ body {
   height: 94px;
   width: 100%;
 }
-
-.main-slider {
-  background: url(./assets/images/Rectangle32.png) no-repeat;
-  background-size: cover;
-
-  height: 940px;
+.header-wrap {
+  width: 1520px;
   margin: 0 auto;
 }
-
+.wrapped-small {
+  margin: 0 auto;
+  max-width: 62.5%;
+}
+.header-logo {
+  position: relative;
+  left: 150px;
+}
+.main {
+  max-width: 100vw;
+  overflow: hidden;
+}
+.main-slider {
+  padding: 205px 0 115px;
+  background: url(./assets/images/Rectangle32.png) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 940px;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
 .main-slider__heading {
   color: white;
-  margin-top: 0;
-  padding-top: 205px;
-  padding-left: 210px;
+  padding-top: 0px;
   line-height: 104px;
   font-family: "Roboto", sans-serif;
   font-size: 89px;
@@ -66,6 +87,7 @@ body {
 .header__content-container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .header__navigation a {
@@ -110,6 +132,8 @@ body {
   margin-bottom: 32px;
   margin-right: 0px;
   background: #f2f2f2;
+  position: relative;
+  left: -151px;
 }
 
 .navigation__btn:hover {
@@ -164,12 +188,12 @@ h2 {
   bottom: 6px;
   left: 3px;
 }
-
 .slider {
   display: flex;
-  justify-content: flex-end;
+  margin-left: 30px;
+  width: 331px;
   position: relative;
-  top: -7px;
+  top: -115px;
 }
 
 .eagle {
@@ -194,9 +218,9 @@ li {
   position: absolute;
   color: white;
   display: block;
-  width: 180px;
+  width: 199px;
   height: 48px;
-  top: 233px;
+  top: 232px;
   padding-left: 20px;
   font-size: 14px;
   line-height: 16px;
@@ -224,7 +248,24 @@ li {
   left: 9px;
   transition: .3s;
 }
-
+.kk {
+  position: relative;
+  top: 43px;
+  left: 42px;
+  transition: .3s;
+}
+.elephant {
+  position: relative;
+  top: 43px;
+  left: 76px;
+  transition: .3s;
+}
+.leopard {
+  position: relative;
+  top: 43px;
+  left: 100px;
+  transition: .3s;
+}
 .navigation_slider {
   position: relative;
   float: right;
@@ -234,20 +275,17 @@ li {
 
 .map__check-img-eagle {
   background-image: url(./assets/images/check.svg);
-    padding: 38px;
-    padding-left: 0px;
-    width: 29px;
-    height: 17px;
-    display: block;
+  padding: 67px;
+  padding-left: 0px;
+  width: 29px;
+  height: 17px;
+  display: block;
+  padding-bottom: 27px;
 }
 
 .map__check-img-eagle:hover {
   background-image: url(./assets/images/map/red-check.png);
-    padding: 38px;
-    padding-left: 0px;
-    width: 29px;
-    height: 17px;
-    display: block;
+ 
 }
 
 .nav_slider_p {
@@ -274,6 +312,7 @@ li {
 
 .main__slider-panda {
   color: white;
+  width: 100px;
 }
 
 .right_num {
@@ -292,7 +331,7 @@ li {
 
 .fox_li {
   margin-left: 0;
-  width: 0px;
+  width: 150px;
 }
 
 .e {
@@ -302,7 +341,12 @@ li {
 .content-container__how-it-works {
   height: 883px;
   background-color: #fff;
-  width: 100%;
+}
+
+.block__how-it-works {
+  width: 1200px;
+  margin: 0 auto;
+  height: 700px;
 }
 
 .block__how-it-works h2 {
@@ -312,14 +356,14 @@ li {
   font-family: "Roboto", sans-serif;
   color: #333333;
   padding-top: 100px;
-  padding-left: 415px;
+  padding-left: 204px;
 }
 
 .paragraph__how-it-works {
-  width: 790px;
+  width: 988px;
   height: 80px;
-  padding-top: 32px;
-  padding-left: 414px;
+  padding-top: 30px;
+  padding-left: 203px;
   font-size: 14px;
   line-height: 16px;
   font-family: "Roboto", sans-serif;
@@ -331,16 +375,17 @@ li {
   background-image: url(./assets/images/Rectangle36.png);
   width: 790px;
   height: 323px;
-  padding-left: 790px;
+  padding-left: 791px;
   padding-top: 305px;
   position: relative;
-  top: 334px;
-  left: 414px;
+  top: 366px;
+  left: 203px;
 }
 .how-it-works__slider {
-  float: right;
-  margin-right: 688px;
-  margin-top: 361px;
+  width: 500px;
+  position: relative;
+  top: 403px;
+  left: 478px;
 }
 .how-it-works__slider-p {
   position: relative;
@@ -354,7 +399,9 @@ li {
 .how-it-works__slider-num {
   display: inline-block;
   color: white;
-  padding-left: 96px;
+  padding-left: 94px;
+  position: relative;
+  top: -9px;
 }
 
 .how-it-works__left-num {
@@ -380,9 +427,9 @@ li {
 }
 
 .how-it-works__button {
-  position: absolute;
-  top: 1723px;
-  left: 837px;
+  position: relative;
+  top: 398px;
+  left: 476px;
   width: 245px;
   height: 55px;
   border-radius: 3px;
@@ -402,7 +449,7 @@ li {
   background-image: url(./assets/images/Frame37.png);
   width: 26px;
   height: 26px;
-  padding: 3px;
+  padding: 16px;
   display: inline-block;
   line-height: 21px;
   position: relative;
@@ -419,14 +466,13 @@ li {
 .whats-inspiring-us {
   height: 413px;
   background-color: #f2f2f2;
-  width: 100%;
 }
 
 .tree {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  width: 1250px;
+  width: 1140px;
 }
 
 .what-inspires-us {
@@ -484,7 +530,6 @@ li {
   padding-top: 17px;
   width: 390px;
 }
-
 .what-we-believe-in p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -492,7 +537,7 @@ li {
   line-height: 16px;
   font-weight: 400;
   padding-top: 17px;
-  width: 380px;
+  width: 376px;
 }
 
 .our-mission p {
@@ -528,7 +573,6 @@ figure {
 .pets-in-zoo {
   height: 854px;
   background-color: #fff;
-  width: 100%;
 }
 
 .pets-in-zoo__heading {
@@ -538,13 +582,16 @@ figure {
   font-weight: 900;
   font-family: "Roboto", sans-serif;
   padding-top: 100px;
-  padding-left: 687px;
+  padding-left: 476px;
 }
-
+.pets-in-zoo__nav {
+  width: 1200px;
+  margin: 0 auto;
+}
 .pets-in-zoo__slider {
   display: flex;
-  width: 1620px;
-  padding-left: 210px;
+  width: 1200px;
+  padding-left: 0px;
   padding-top: 1px;
   box-sizing: border-box;
 }
@@ -555,14 +602,18 @@ figure {
   padding-bottom: 382px;
   position: relative;
   top: 0px;
+  transition: .3s;
 }
-
-.panda_2,
-.eagle_2,
-.gorilla_2,
-.alligator_2 {
+.pets-in-zoo__slider li:nth-child(2) {
+  transition: .3s;
+}
+.pets-in-zoo__slider li:nth-child(2):hover {
+  transform: scale(1.1);
+}
+.panda_2, .eagle_2, .gorilla_2, .alligator_2 {
   width: 278px;
   height: 399px;
+  transition: .3s;
 }
 
 .pets-in-zoo__slider li {
@@ -571,37 +622,37 @@ figure {
 
 .arrow_left {
   position: relative;
-  left: 165px;
+  left: -44px;
   top: 220px;
   width: 50px;
 }
 
 .arrow_left_1 {
   position: relative;
-  left: 167px;
+  left: -7px;
   top: 202px;
   width: 50px;
 }
 
 .arrow_right {
   position: relative;
-  left: 1436px;
+  left: 1225px;
   top: -298px;
   width: 50px;
 }
 
 .arrow_right_1 {
   position: relative;
-  left: 1436px;
+  left: 1264px;
   top: -171px;
   width: 50px;
 }
 
 .pets-in-zoo__button {
   position: relative;
-  top: -94px;
-  left: 686px;
-  width: 245px; 
+  top: -83px;
+  left: 474px;
+  width: 245px;
   height: 55px;
   border-radius: 3px;
   border: 0;
@@ -613,6 +664,7 @@ figure {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .pets-in-zoo__a {
@@ -634,6 +686,8 @@ figure {
   display: inline-block;
   color: white;
   padding-left: 96px;
+  position: relative;
+  top: -9px;
 }
 
 .pets-in-zoo__left-num {
@@ -660,23 +714,25 @@ figure {
 
 .pets-in-zoo__slider_1 {
   position: relative;
-  top: -88px;
+  top: -78px;
   margin-right: 0px;
   margin-top: 0;
-  padding-left: 689px;
+  padding-left: 478px;
 }
-
+.wrap-pay-and-feed {
+  width: 1200px;
+  margin: 0 auto;
+}
 .pay-and-feed {
   height: 854px;
   background-color: #fff;
-  width: 100%;
 }
 
 .pets-in-zoo__text {
   position: relative;
   color: white;
   display: block;
-  width: 180px;
+  width: 202px;
   height: 48px;
   top: -134px;
   padding-left: 22px;
@@ -698,7 +754,11 @@ figure {
   top: -129px;
   left: 22px;
 }
-
+.text-link {
+  display: inline-block;
+  position: relative;
+  left: 8px;
+}
 .pets-in-zoo-play {
   background-image: url(./assets/images/play_pets_in_zoo.svg) no-repeat;
   width: 26px;
@@ -771,7 +831,7 @@ figure {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   top: -66px;
-  left: 22px;
+  left: 28px;
 }
 
 .main-slider__play {
@@ -789,9 +849,8 @@ figure {
 .text-link {
   display: inline-block;
   position: relative;
-  left: -5px;
+  left: 1px;
 }
-
 .arrow-left_img:hover {
   opacity: 0.5;
 }
@@ -817,6 +876,11 @@ figure {
 .eagle_li {
   position: relative;
   left: -23px;
+  transition: 0.3s;
+}
+
+.eagle_li:hover {
+  transform: scale(1.1);
 }
 
 .main_gorilla {
@@ -824,10 +888,14 @@ figure {
   width: 187px;
   height: 250px;
   position: relative;
-  left: -26px;
-  top: 44px;
+  padding-left: 186px;
+  left: -27px;
+  top: 43px;
+  transition: .3s;
 }
-
+.main_gorilla:hover {
+  transform: scale(1.1);
+}
 .main_ali {
   width: 150px;
   position: relative;
@@ -837,7 +905,7 @@ figure {
 .main-slider__text-link {
   display: inline-block;
   position: relative;
-  left: -5px;
+  left: 0px;
 }
 
 .main-slider__text-link_dollar {
@@ -856,13 +924,13 @@ figure {
 .text-link__pets-in-zoo {
   color: white;
   position: relative;
-  left: -5px;
+  left: 0px;
   top: -2px;
 }
 
 .pay-and-feed {
   background-color: #f2f2f2;
-  width: 100%;
+
   height: 754px;
 }
 
@@ -872,8 +940,8 @@ figure {
   font-size: 48px;
   line-height: 56px;
   font-family: "Roboto", sans-serif;
-  width: 790px;
-  padding-left: 669px;
+  width: 755px;
+  padding-left: 458px;
   padding-top: 100px;
 }
 
@@ -884,7 +952,7 @@ figure {
   line-height: 16px;
   color: #4f4f4f;
   padding-top: 31px;
-  padding-left: 470px;
+  padding-left: 261px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -892,15 +960,15 @@ figure {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  width: 1267px;
-  padding-left: 174px;
+  width: 1213px;
+  padding-left: 0px;
   padding-top: 90px;
 }
 
 .pay-and-feed__button {
   position: relative;
   top: 136px;
-  left: 686px;
+  left: 475px;
   width: 245px;
   height: 55px;
   border-radius: 3px;
@@ -915,7 +983,10 @@ figure {
   line-height: 21px;
   transition: .3s;
 }
-
+.testimonials-wrap {
+  width: 1273px;
+  margin: 0 auto;
+}
 .testimonials {
   background-color: #fff;
   width: 100%;
@@ -929,8 +1000,8 @@ figure {
   line-height: 56px;
   color: #333333;
   font-family: "Roboto", sans-serif;
-  width: 790px;
-  padding-left: 670px;
+  width: 478px;
+  padding-left: 497px;
   padding-top: 99px;
 }
 
@@ -938,9 +1009,9 @@ figure {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  width: 1227px;
+  width: 1256px;
   padding-top: 29px;
-  padding-left: 199px;
+  padding-left: 16px;
 }
 
 .testimonials__blog--left {
@@ -949,7 +1020,7 @@ figure {
   height: 310px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
+  box-shadow: 2px 4px 15px rgb(6 12 70 / 10%);
 }
 
 .testimonials__blog--right {
@@ -1037,20 +1108,22 @@ figure {
   display: inline-block;
   color: white;
   padding-left: 96px;
+  position: relative;
+  top: -11px;
 }
 
 .testimonials__slider_1 {
   position: relative;
   top: 14px;
   margin-right: 0px;
-  margin-top: 0;
-  padding-left: 689px;
+  margin-top: 11px;
+  padding-left: 516px;
 }
 
 .testimonials__button {
   position: relative;
   top: 8px;
-  left: 688px;
+  left: 514px;
   width: 245px;
   height: 55px;
   border-radius: 3px;
@@ -1081,34 +1154,38 @@ figure {
   color: #828282;
   line-height: 16px;
 }
-
+.map-wrap {
+  position: relative;
+  left: -59px;
+  width: 1279px;
+  margin: 0 auto;
+}
 .map {
   background-color: #f2f2f2;
   width: 100%;
   height: 904px;
 }
-
 .map__heading {
   color: #333333;
   font-size: 48px;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
   line-height: 56px;
-  width: 790px;
-  padding-left: 763px;
+  width: 386px;
+  padding-left: 653px;
   padding-top: 99px;
 }
 
 .map__img {
   width: 1200px;
-  padding-left: 210px;
+  margin-left: 99px;
   padding-top: 61px;
 }
 
 .map__button {
   position: relative;
-  top: -382px;
-  left: 686px;
+  top: -43px;
+  left: 577px;
   width: 245px;
   height: 55px;
   border-radius: 3px;
@@ -1121,13 +1198,14 @@ figure {
   color: white;
   text-transform: uppercase;
   line-height: 21px;
+  transition: .3s;
 }
 
 .map__i {
   background-image: url(./assets/images/Frame37.png);
   width: 26px;
   height: 26px;
-  padding: 3px;
+  padding: 16px;
   display: inline-block;
   line-height: 21px;
   position: relative;
@@ -1149,46 +1227,49 @@ figure {
 
 .map__img-eagle {
   position: relative;
-  top: -23px;
+  top: -53px;
   left: 12px;
 }
 
 .map__check-kroko {
   background-image: url(./assets/images/check.svg);
-    padding: 63px;
-    padding-top: 14px;
-    padding-left: 4px;
-    position: relative;
-    top: -376px;
-    left: 350px;
-    width: 0px;
-    height: 17px;
-    display: inline-block;
+  padding: 54px;
+  padding-top: 14px;
+  padding-left: 14px;
+  position: relative;
+  top: -376px;
+  left: 242px;
+  width: 40px;
+  height: 12px;
+  display: inline-block;
+  padding-bottom: 80px;
 }
 
 .map__check-kroko:hover {
   background-image: url(./assets/images/map/red-check.png);
-    padding: 63px;
+  padding: 54px;
     padding-top: 14px;
-    padding-left: 4px;
+    padding-left: 13px;
     position: relative;
     top: -376px;
-    left: 350px;
-    width: 0px;
-    height: 17px;
+    left: 243px;
+    width: 40px;
+    height: 12px;
     display: inline-block;
+    padding-bottom: 80px;
 }
 
 .map__kroko {
   position: relative;
-  top: 0;
-  left: 7px;
+  top: -1px;
+  left: -1px;
 }
 
 .kroko {
   position: relative;
   top: -116px;
   left: 104px;
+  width: 100px;
 }
 
 
@@ -1214,12 +1295,25 @@ figure {
 
 .map2 {
   height: 904px;
+  width: 1277px;
+}
+
+.footer-wrap {
+  width: 1290px;
+  margin: 0 auto;
 }
 
 .footer {
   background-color: #333333;
   width: 100%;
   height: 751px;
+  background-size: 100%;
+}
+
+.zoo-online-centre {
+  position: relative;
+  left: -113px;
+  width: 400px;
 }
 
 .footer-logo__pictures {
@@ -1231,7 +1325,7 @@ figure {
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-top: 78px;
-  padding-left: 504px;
+  padding-left: 371px;
   width: 404px;
 }
 
@@ -1260,7 +1354,9 @@ figure {
   display: inline-block;
   width: 275px;
   height: 55px;
-  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  background: linear-gradient( 
+106.89deg
+, #4bd8b5 -14.32%, #49d6df 100.68%);
   border-radius: 3px;
   text-transform: uppercase;
   outline: none;
@@ -1270,6 +1366,10 @@ figure {
   line-height: 21px;
   border: 0;
   margin-top: 99px;
+  position: relative;
+  top: 378px;
+  left: -241px;
+  transition: .3s;
 }
 
 .footer__heading {
@@ -1279,8 +1379,8 @@ figure {
   line-height: 23px;
   font-family: "Roboto", sans-serif;
   color: #fefefe;
-  padding-left: 0;
-  padding-top: 53px;
+  padding-left: 2px;
+  padding-top: 55px;
 }
 
 .input_first {
@@ -1327,7 +1427,7 @@ input::-webkit-input-placeholder {
 
 .fieldset {
   width: 380px;
-  height: 118px;
+  height: 123px;
   margin-top: 22px;
   background-color: #333;
   border-radius: 5px;
@@ -1394,9 +1494,10 @@ legend {
 
 .footer_span-arrow {
   background-image: url(./assets/images/Arrow4.svg);
-  width: 42px;
+  width: 49px;
   height: 2px;
-  padding: 3px;
+  padding: 4px;
+  padding-left: 22px;
   display: inline-block;
   line-height: 21px;
   position: relative;
@@ -1407,6 +1508,7 @@ legend {
 .footer__main {
   display: flex;
   justify-content: space-between;
+  height: 250px;
 }
 
 .zoo-online-centre__heading {
@@ -1416,8 +1518,7 @@ legend {
   line-height: 16px;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  padding-right: 540px;
-  padding-right: 659px;
+width: 200px;
   padding-top: 54px;
   color: #fefefe;
 }
@@ -1427,13 +1528,14 @@ legend {
 .zoo-online-centre-info3,
 .zoo-online-centre-info4 {
   display: block;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  font-family: "Roboto", sans-serif;
-  color: #fefefe;
-  padding-top: 35px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #fefefe;
+    padding-top: 35px;
+    width: 300px;
 }
 
 .zoo-online-centre-info2 {
@@ -1454,12 +1556,8 @@ legend {
   position: relative;
   width: 20px;
   height: 121px;
-  top: -106px;
-  left: -618px;
-}
-
-.slider img:hover {
-  transform: scale(1.1);
+  top: -237px;
+  left: -766px;
 }
 
 .pets-in-zoo__slider img:hover {
@@ -1497,7 +1595,7 @@ a {
 
 .hr {
   border-bottom: 1px #bdbdbd solid;
-  width: 1620.04px;
+  width: 1278px;
   margin-top: 74px;
 }
 
@@ -1525,32 +1623,34 @@ a {
 
 .line {
   border-bottom: 1px white solid;
-  width: 1075px;
-  position: absolute;
-  left: 845px;
-  top: 688px;
+  width: 1029px;
+  position: relative;
+  left: 847px;
+  top: 89px;
 }
-
+.main-slider-block {
+  width: 361px;
+  margin-left: 918px;
+}
 .circ_line {
   display: block;
   height: 11px;
   width: 11px;
   border: 1px white solid;
   border-radius: 50%;
-  position: absolute;
-  left: 840px;
-  top: 682px;
+  position: relative;
+  left: 841px;
+  top: 83px;
 }
-
 .circ_line_1 {
   display: block;
   height: 5px;
   width: 5px;
   border: none;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
   left: 844px;
-  top: 686px;
+  top: 75px;
   background-color: white;
 }
 
@@ -1559,7 +1659,6 @@ a {
 }
 
 .how-it-works__button:hover {
-  opacity: 0.3;
   transform: scale(1.1);
 }
 
@@ -1599,7 +1698,7 @@ a {
 }
 
 .pets-in-zoo__button:hover {
-  opacity: 0.4;
+  transform: scale(1.1);
 }
 
 .pay-and-feed__button:hover {
@@ -1608,7 +1707,7 @@ a {
 }
 
 .testimonials__button:hover {
-  opacity: 0.4;
+  transform: scale(1.1);
 }
 
 .testimonials__slider-p:hover {
@@ -1621,11 +1720,11 @@ a {
 }
 
 .map__button:hover {
-  opacity: 0.4;
+  transform: scale(1.1);
 }
 
 .footer__button:hover {
-  opacity: 0.4;
+  transform: scale(1.1);
 }
 
 .social_footer img:hover {
@@ -1636,7 +1735,9 @@ a {
   position: absolute;
   display: none;
 }
-
+.eagle_2:hover {
+  transform: scale(1.1);
+}
 .header__navigation a:hover {
   font-weight: 900;
   text-decoration: underline;
@@ -1657,8 +1758,8 @@ button:hover {
 }
 
 .main__button {
-  position: absolute;
-  top: 507px;
+  position: relative;
+  top: 0px;
   left: 360px;
   width: 245px;
   height: 55px;
@@ -1680,11 +1781,7 @@ button:hover {
   transform: scale(1.1)
 }
 
-.main-slider-block {
-  position: relative;
-  left: 620px;
-  width: 1000px;
-}
+
 
 #form-checkbox {
   display: none;
@@ -1720,26 +1817,25 @@ input:checked + label:before {
 }
 
 .hr {
-  margin-top: 74px;
+  margin-top: 229px;
 }
 
 .panda_output {
   position: relative;
-  left: 487px;
-  top: -23px;
+  left: 339px;
+  top: -132px;
 }
 
 .panda_slider {
   margin-top: 11px;
   position: relative;
-  left: 334px;
-  top: 1px;
+  left: 242px;
+  top: -130px;
   -webkit-appearance: none;
   width: 245px;
   height: 5px;
   background: rgba(189, 189, 189, 0.57);
   outline: none;
-  /* opacity: 0.7; */
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -1756,26 +1852,10 @@ input:checked + label:before {
   cursor: pointer;
 }
 
-
-
-panda_2:hover {
-  width: 130px;
-  height: 130px;
-  background-color: #2196F3;
-  transition: background-color 1s linear;
-}
-
 .map__check-img-eagle {
   position: relative;
-  top: -428px;
-  left: 331px;
+  left: 222px;
 }
-
-
-
-
-
-
 
 .map__check-gorilla:hover {
   background-image: url("./assets/images/map/red-check.png");
@@ -1799,74 +1879,78 @@ panda_2:hover {
   width: 100px;
 }
 
-
-
-
 .map__check-gorilla {
   background-image: url(./assets/images/check.svg);
-  padding: 38px;
-  padding-left: 29px;
+  padding: 41px;
+  padding-left: 26px;
   position: relative;
   top: -417px;
-  left: 348px;
+  left: 240px;
   display: block;
   width: 0px;
   height: 18px;
+  padding-bottom: 53px;
 }
 
 .map__check-gorilla:hover {
   background-image: url(./assets/images/map/red-check.png);
-  padding: 38px;
-  padding-left: 29px;
+  padding: 41px;
+  padding-left: 26px;
   position: relative;
   top: -417px;
-  left: 348px;
+  left: 240px;
   display: block;
   width: 0px;
   height: 18px;
+  padding-bottom: 53px;
 }
 
 .map__gorilla {
   position: relative;
-  top: -24px;
-    left: -16px;
+  top: -28px;
+  left: -14px;
 }
 .map__panda {
   position: relative;
-  top: -24px;
+  top: -27px;
   left: -16px;
 }
-
 
 .map__check-panda {
   background-image: url(./assets/images/check.svg);
   padding: 38px;
   padding-left: 29px;
   position: relative;
-  top: -667px;
-  left: 1104px;
+  top: -668px;
+  left: 992px;
   display: block;
   width: 0px;
   height: 18px;
+  padding-bottom: 56px;
 }
 
 .map__check-panda:hover {
   background-image: url(./assets/images/map/red-check.png);
-
   padding: 38px;
   padding-left: 29px;
   position: relative;
-  top: -667px;
-  left: 1104px;
+  top: -668px;
+  left: 992px;
   display: block;
   width: 0px;
   height: 18px;
+  padding-bottom: 56px;
 }
 
 .panda-check {
   position: relative;
   top: -24px;
     left: 0px;
+}
+
+.btn-action {
+  position: relative;
+  top: -340px;
 }
 
 .pay-and-feed__arrow {
@@ -1882,4 +1966,5 @@ panda_2:hover {
   padding-bottom: 0px;
   height: 21px;
   display: none;
+}
 }

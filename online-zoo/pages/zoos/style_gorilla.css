@@ -591,11 +591,7 @@ li .map_nav {
   background-position: center;*/
   border-radius: 178px;
   border: 3px solid #e01071;
-<<<<<<< HEAD
   transform: scale(1.2);
-=======
-  transform: scale(1.28);
->>>>>>> online-zoo
 }
 
 .animals__top-vector {
@@ -783,17 +779,6 @@ li .map_nav {
   transform: scale(1.05);
 }
 
-<<<<<<< HEAD
-=======
-.animals__croco {
-  border-radius: 178px;
-
-  width: 102px;
-  height: 102px;
-  transform: scale(1.28);
-}
-
->>>>>>> online-zoo
 .animals__panda {
   width: 130px;
   height: 130px;
@@ -820,13 +805,6 @@ li .map_nav {
   border-bottom: 1px black solid;
 }
 
-<<<<<<< HEAD
-=======
-.header__navigation li .zoos:hover {
-  font-weight: 400;
-  border-bottom: 1px white solid;
-}
->>>>>>> online-zoo
 
 .header__navigation li .map_nav:hover {
   font-weight: 900;
@@ -879,7 +857,6 @@ input:checked + label:before {
 .hr {
   margin-top: 74px;
 }
-<<<<<<< HEAD
 
 .about:active {
   line-height: 18px; 
@@ -902,7 +879,7 @@ input:checked + label:before {
   border-radius: 50%;
   background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
   }
-   
+  
   .slider-btn_2 {
     position: relative;
     width: 8px;
@@ -939,5 +916,3 @@ input:checked + label:before {
       .slider-btn_3:hover {
         cursor: pointer;
       }
-=======
->>>>>>> online-zoo
