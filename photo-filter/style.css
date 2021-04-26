@@ -260,7 +260,7 @@ img {
 }
 
 canvas {
-  display: none;
+  display: none; 
   border: none;
   max-height: 520px;
   max-width: 830px;

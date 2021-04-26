@@ -176,7 +176,7 @@ download.onclick = function (e) {
 };
 
 // Load picture
-
+ 
 const btnload = document.querySelector(".btn-load");
 const fileInput = document.querySelector('input[type="file"]');
 const imageContainer = document.querySelector('.image-container');
