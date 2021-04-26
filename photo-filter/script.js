@@ -123,12 +123,15 @@ let hueEffect = "0deg";
        if (e.target.name === "hue") {
         hueEffect = e.target.value + suffix;
        };
-
+     
        drawImage(blurEffect, sepiaEffect, invertEffect, saturateEffect, hueEffect);
   }
 
 
 function drawImage(...rest) {
+
+  let pop = rest[rest.length - 1];
+ 
   let first = rest.shift();
   let sepia = rest[0];
   let invert = rest[1];
@@ -137,16 +140,26 @@ function drawImage(...rest) {
 
   const img = new Image();
   img.setAttribute('crossOrigin', 'anonymous');
-  
+
   img.onload = function() {
     canvas.width = img.naturalWidth;
     canvas.height = img.naturalHeight;
     const ctx = canvas.getContext("2d");
-    ctx.filter = `blur(${first}) invert(${invert}) sepia(${sepia}) saturate(${saturate}) hue-rotate(${hueEffect})`;
+ 
+      ctx.filter = `blur(${first}) invert(${invert}) sepia(${sepia}) saturate(${saturate}) hue-rotate(${hueEffect})`;
+console.log(a);
+      //ctx.filter = "none;"
+    
+    
+   
+  
+    
+
     ctx.drawImage(img, 0, 0);
   };
 
   img.src = "assets/img/img.jpg";
+  
   if (k === 0) {
     img.src = "assets/img/img.jpg";
   } else if (k >= 1 && k <= 9) {
@@ -158,6 +171,9 @@ function drawImage(...rest) {
     k = 1;
     img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timesOfDay}/01.jpg`;
   }
+  if (k === 100) {
+    img.src = pop;
+  }
   
 }
 drawImage();
@@ -168,7 +184,7 @@ const dataURL = canvas.toDataURL(`https://raw.githubusercontent.com/rolling-scop
 const download = document.querySelector(".btn-save");
 download.onclick = function (e) {
 
-  var link = document.createElement('a');
+  let link = document.createElement('a');
   link.download = 'download.png';
   link.href = canvas.toDataURL();
   link.click();
@@ -180,22 +196,40 @@ download.onclick = function (e) {
 const btnload = document.querySelector(".btn-load");
 const fileInput = document.querySelector('input[type="file"]');
 const imageContainer = document.querySelector('.image-container');
+
 fileInput.addEventListener('change', function (e) {
+
   const file = fileInput.files[0];
   const reader = new FileReader();
   reader.onload = () => {
     const img = new Image();
     img.src = reader.result;
+
+    imageContainer.src = img.src;
+    canvas.src = img.src;
+    canvas.width = img.width;
+    canvas.height = img.height;
+    canvas.naturalWidth;
+    canvas.naturalHeight;
+    realSrc = img.src;
+  
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
     imageContainer.innerHTML = "";
     imageContainer.append(img);
+    realSrc = img.src;
+    k = 100;
+    drawImage(realSrc);
   }
   reader.readAsDataURL(file);
+  fileInput.value = '';
 });
 
 // Reset button
 
 const resetButton = document.querySelector(".btn-reset");
-resetButton.onclick = clear;
+resetButton.addEventListener("click", clear)
 const outputs = document.querySelectorAll("output");
 
 function clear() {
@@ -207,6 +241,7 @@ function clear() {
     if (e.name === "saturate") {
       outputs[3].textContent = 100;
       e.value = 100;
+      blurEffect = "0px";
       document.documentElement.style.setProperty(`--${e.name}`, e.value + suffix);
       outputs[3].textContent = e.value;
     } else {
@@ -216,6 +251,7 @@ function clear() {
       outputs[1].textContent = e.value;
       outputs[2].textContent = e.value;
       outputs[4].textContent = e.value;
+
     }
   }
 }
