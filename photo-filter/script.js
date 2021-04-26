@@ -102,6 +102,8 @@ let hueEffect = "0deg";
 
   inputs.forEach(input => input.addEventListener("input", blurValue));
   function blurValue(e) {
+
+    
     const suffix = this.dataset.sizing || "";
     
       if (e.target.name === "blur") {
@@ -123,11 +125,11 @@ let hueEffect = "0deg";
        if (e.target.name === "hue") {
         hueEffect = e.target.value + suffix;
        };
-     
+     console.log(a);
        drawImage(blurEffect, sepiaEffect, invertEffect, saturateEffect, hueEffect);
   }
 
-
+let a = 0;
 function drawImage(...rest) {
 
   let pop = rest[rest.length - 1];
@@ -198,7 +200,6 @@ const fileInput = document.querySelector('input[type="file"]');
 const imageContainer = document.querySelector('.image-container');
 
 fileInput.addEventListener('change', function (e) {
-
   const file = fileInput.files[0];
   const reader = new FileReader();
   reader.onload = () => {
@@ -251,7 +252,7 @@ function clear() {
       outputs[1].textContent = e.value;
       outputs[2].textContent = e.value;
       outputs[4].textContent = e.value;
-
+    a++
     }
   }
 }
