@@ -18,7 +18,7 @@
     <div class="filters">
       <label>
         Blur:
-        <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
+        <input name="blur" id="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
         <output name="blur">0</output>
       </label>
       <label>
@@ -52,7 +52,9 @@
         </label>
         <button class="btn btn-save">Save picture</button>
       </div>
-      <img src="assets/img/img.jpg" alt="image" />
+      <canvas></canvas>
+      
+      <div class="image-container"><img src="assets/img/img.jpg" alt="image" /></div>
     </div>
   </main>
   <footer class="footer">

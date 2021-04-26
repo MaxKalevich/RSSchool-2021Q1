@@ -258,6 +258,14 @@ img {
   right: -5px;
   letter-spacing: 0;
 }
+
+canvas {
+  display: none;
+  border: none;
+  max-height: 520px;
+  max-width: 830px;
+}
+
 @media (max-width: 1024px) {
   .main {
     padding-top: 40px;
