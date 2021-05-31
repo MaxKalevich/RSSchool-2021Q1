@@ -1,13 +1,16 @@
-import { delay } from "../../shared/delay";
-import {BaseComponent} from "../base-component";
-import {Card} from "../card/card";
-import {CardsField} from "../cards-field/cards-field";
+import { delay } from '../../shared/delay';
+import { BaseComponent } from '../base-component';
+import { Card } from '../card/card';
+import { CardsField } from '../cards-field/cards-field';
 
 const FLIP_DELAY = 3000;
 
 export class Game extends BaseComponent {
   private readonly cardsField: CardsField;
+
   private activeCard?: Card;
+
+  private isAnimation = false;
 
   constructor() {
     super();
@@ -19,7 +22,7 @@ export class Game extends BaseComponent {
     this.cardsField.clear();
     const cards = images.concat(images)
       .map((url) => new Card(url))
-      .sort(() => Math.random() - .5);
+      .sort(() => Math.random() - 0.5);
 
     cards.forEach((card) => card.element.addEventListener('click', () => this.cardHandler(card)));
 
@@ -27,14 +30,23 @@ export class Game extends BaseComponent {
   }
 
   private async cardHandler(card: Card) {
-   await card.flipToFront();
-   await delay(FLIP_DELAY);
-      if (!this.activeCard) this.activeCard = card;
-      else {
-        if (this.activeCard.image != card.image) {
-         await this.activeCard.flipToBack();
-         await card.flipToBack();
-        }
-      }
+    if (this.isAnimation) return;
+    if (!card.isFlipped) return;
+    this.isAnimation = true;
+
+    await card.flipToFront();
+
+    if (!this.activeCard) {
+      this.activeCard = card;
+      this.isAnimation = false;
+      return;
+    }
+    if (this.activeCard.image !== card.image) {
+      await delay(FLIP_DELAY);
+      await Promise.all([await this.activeCard.flipToBack(), card.flipToBack()]);
+    }
+
+    this.activeCard = undefined;
+    this.isAnimation = false;
   }
 }
