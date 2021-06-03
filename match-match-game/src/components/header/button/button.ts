@@ -1,15 +1,14 @@
 import { BaseComponent } from '../../base-component';
 import './button.scss';
-import { Stopwatch } from '../../stopwatch/stopwatch';
+// eslint-disable-next-line import/no-cycle
+import { Application } from '../../../pages/application/application';
 
 export class Button extends BaseComponent {
   constructor() {
-    const time = new Stopwatch();
-
     super('button', ['button']);
-    this.element.innerHTML = 'STOP GAME';
+    this.element.innerHTML = 'Start Game';
     this.element.onclick = () => {
-      time.timer(true);
+      Application.renderNewPage('game-page');
     };
   }
 }

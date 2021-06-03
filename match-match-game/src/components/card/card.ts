@@ -10,17 +10,19 @@ export class Card extends BaseComponent {
     super('div', ['card-container']);
     this.element.innerHTML = `
   <div class="card">
-    <div class="card__front" style="background-image: url('/match-match-game/public/images/${image}')"></div>
+    <div class="card__front" style="background-image: url('/images/${image}');"></div>
     <div class="card__back"></div>
   </div>
     `;
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   flipToBack() {
     this.isFlipped = true;
     return this.flip(true);
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   flipToFront() {
     this.isFlipped = false;
     return this.flip();

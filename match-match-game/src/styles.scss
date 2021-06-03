@@ -8,12 +8,22 @@ html {
 }
 
 body {
-  color: white;
+  color: black;
   font-family: 'Roboto', sans-serif;
 }
 
+.red {
+  color: red;
+}
 
+.disp {
+  display: block;
+}
 
+.d {
+  display: none;
+}
 
-
-
+.border-color {
+  border-color: red;
+}
