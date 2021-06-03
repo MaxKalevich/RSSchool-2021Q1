@@ -1,11 +1,8 @@
 import Page from '../../core/templates/page';
-import { Stopwatch } from '../../components/stopwatch/stopwatch';
 import { Game } from '../../components/game/game';
 import { ImageCategoryModel } from '../../models/image-category-model';
 
 export class AppGamePage extends Page {
-
-
   private readonly game: Game;
 
   constructor(id: string) {

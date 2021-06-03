@@ -6,6 +6,7 @@ abstract class Component {
     this.container.className = className;
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   render() {
     return this.container;
   }

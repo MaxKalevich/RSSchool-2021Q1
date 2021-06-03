@@ -24,7 +24,7 @@ export class Stopwatch extends BaseComponent {
     }
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  // eslint-disable-next-line class-methods-use-this,@typescript-eslint/explicit-module-boundary-types
   deadline(num: number) {
     const a = setInterval(() => {
       // eslint-disable-next-line no-param-reassign

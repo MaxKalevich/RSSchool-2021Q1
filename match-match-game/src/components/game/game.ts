@@ -61,8 +61,6 @@ export class Game extends BaseComponent {
 
     const cardsContainerLength = document.querySelectorAll('.card-container').length;
     const flipped = document.querySelectorAll('.flipped').length;
-    console.log(cardsContainerLength);
-    console.log(flipped);
     if (flipped === 0) {
       alert('You Win!');
     }

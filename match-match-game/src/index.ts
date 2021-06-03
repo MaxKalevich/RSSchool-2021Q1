@@ -1,7 +1,6 @@
 import './styles.scss';
 import { Application } from './pages/application/application';
 
-
 const application = new Application();
 application.run();
 const validateName = document.querySelector('input');
@@ -37,7 +36,7 @@ function val(e: any) {
   }
   // eslint-disable-next-line @typescript-eslint/no-shadow
   const val = e.target.value;
-  const onlyLetters = /^(([a-z_\(\)\s]+)|([а-яё_\(\)\s]+))$/.test(val);
+  const onlyLetters = /^(([a-z_\s]+)|([а-яё_\s]+))$/.test(val);
   if (!onlyLetters) {
     if (validateName !== null && buttonSend !== null) {
       validateName.classList.add('red');
@@ -71,7 +70,7 @@ function valid(e: any) {
   }
   // eslint-disable-next-line @typescript-eslint/no-shadow
   const val = e.target.value;
-  const onlyLetters = /^(([a-z_\(\)\s]+)|([а-яё_\(\)\s]+))$/.test(val);
+  const onlyLetters = /^(([a-z_\s]+)|([а-яё_\s]+))$/.test(val);
   if (!onlyLetters) {
     if (validateFamily !== null && buttonSend !== null) {
       validateFamily.classList.add('red');
@@ -89,4 +88,3 @@ if (validateName !== null) {
 if (validateFamily !== null) {
   validateFamily.addEventListener('input', (e) => valid(e));
 }
-
