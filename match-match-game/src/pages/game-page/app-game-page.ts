@@ -9,6 +9,9 @@ export class AppGamePage extends Page {
     super(id);
     this.game = new Game();
     this.container.appendChild(this.game.element);
+    this.container.style.background = 'url(.//images/texture.jpg)';
+    this.container.style.height = '700px';
+    this.container.style.backgroundSize = 'cover';
   }
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -23,6 +26,7 @@ export class AppGamePage extends Page {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   render() {
     this.start();
+
     return this.container;
   }
 }

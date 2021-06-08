@@ -4,6 +4,7 @@ import { Card } from '../card/card';
 import { CardsField } from '../cards-field/cards-field';
 import './game.scss';
 import { Stopwatch } from '../stopwatch/stopwatch';
+import { ModalWindow } from '../modal-window/modal';
 
 const FLIP_DELAY = 1500;
 
@@ -11,6 +12,8 @@ export class Game extends BaseComponent {
   private readonly cardsField: CardsField;
 
   private readonly stopwatch: Stopwatch;
+
+  private readonly modal: ModalWindow;
 
   private count: boolean;
 
@@ -23,27 +26,30 @@ export class Game extends BaseComponent {
     this.count = false;
     this.stopwatch = new Stopwatch();
     this.element.appendChild(this.stopwatch.element);
-
+    // this.stopwatch.element.classList.remove('seconds');
     this.cardsField = new CardsField();
     this.element.appendChild(this.cardsField.element);
+
+    this.modal = new ModalWindow();
+    this.element.appendChild(this.modal.element);
+    this.modal.element.classList.add('hystmodal-active');
   }
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   newGame(images: string[]) {
-    this.stopwatch.deadline(10);
+    this.stopwatch.deadline(11);
     this.cardsField.clear();
     const cards = images.concat(images)
       .map((url) => new Card(url))
       .sort(() => Math.random() - 0.5);
     cards.forEach((card) => card.element.addEventListener('click', () => this.cardHandler(card)));
-
     this.cardsField.addCards(cards);
   }
 
   private async cardHandler(card: Card) {
     if (card.isFlipped) {
       if (!this.count) {
-        this.stopwatch.timer();
+        this.stopwatch.timer(false);
         this.count = true;
       }
     }
@@ -62,7 +68,13 @@ export class Game extends BaseComponent {
     const cardsContainerLength = document.querySelectorAll('.card-container').length;
     const flipped = document.querySelectorAll('.flipped').length;
     if (flipped === 0) {
-      alert('You Win!');
+      this.stopwatch.action = false;
+      this.modal.element.classList.remove('hystmodal-active');
+      this.cardsField.clear();
+      this.stopwatch.element.classList.remove('seconds');
+      this.stopwatch.clear();
+      const time = this.stopwatch.timer();
+      console.log(time)
     }
     if (this.activeCard.image !== card.image) {
       let cardElem = card.element.children[0].children[0].classList.add('red');
