@@ -1,0 +1,14 @@
+.winners-button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+.winners-button:active {
+  transform: scale(0.9);
+}

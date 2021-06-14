@@ -1,0 +1,18 @@
+.create-button {
+  border: none;
+  display: block;
+  background-color: red;
+  width: 100px;
+  color: white;
+  font-weight: bold;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.create-button:active {
+  transform: scale(0.9);
+}
+
