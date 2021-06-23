@@ -8,7 +8,6 @@ export class WinnersButton {
     this.button.className = 'winners-button';
     this.button.innerText = 'To Winners!';
     this.button.onclick = () => {
-      // App.renderNewPage('winners-page');
       // @ts-ignore
       window.location = '#winners-page';
     };

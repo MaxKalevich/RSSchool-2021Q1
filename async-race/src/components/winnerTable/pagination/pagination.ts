@@ -88,9 +88,6 @@ export function pagination(parent: HTMLElement) {
     for (let i = 0; i < pages.length; i++) {
       pages[i].className = 'none';
     }
-
-    // @ts-ignore
-    // tableWrap.innerHTML = '';
     ++countPage;
     renderPage(countPage);
   };

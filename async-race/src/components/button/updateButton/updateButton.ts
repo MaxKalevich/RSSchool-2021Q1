@@ -16,7 +16,6 @@ export class UpdateButton {
     parent.append(this.button);
     this.button.onclick = () => {
       updateCarInGarage(stateObject.updateName, stateObject.updateColorValue, stateObject.carTarget);
-      //  updateWinnerChange(stateObject.carTarget, stateObject.updateColorValue, stateObject.updateName, 1)
       stateObject.updateName = '';
       stateObject.updateColorValue = '';
       stateObject.carTarget = '';

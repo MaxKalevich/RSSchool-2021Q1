@@ -8,7 +8,7 @@ export function carAnimations(id: number, time: number, status:string):void {
       car.style.transition = 'initial';
       car.style.left = '5px';
     } else if (status === 'broken') {
-      const posY = car.offsetLeft; // левый отступ эл-та от родителя
+      const posY = car.offsetLeft;
       car.style.transition = 'initial';
       car.style.left = `${posY}px`;
     }

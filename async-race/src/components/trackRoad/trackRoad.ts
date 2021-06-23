@@ -65,7 +65,6 @@ export const generateSingleTrackRoad = (parent: HTMLElement, colorCar: string,
   buttonStop.classList.add('road-wrapper-button-stop');
   buttonStop.innerText = 'Stop';
   buttonStop.disabled = true;
-  //  buttonStop.style.backgroundColor = 'silver';
   buttonStop.onclick = () => {
     buttonStart.disabled = false;
     buttonStart.style.backgroundColor = 'pink';

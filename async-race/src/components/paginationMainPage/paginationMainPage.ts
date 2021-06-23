@@ -39,17 +39,8 @@ export function renderCars(numberPage: number, parent: HTMLElement): void {
 
     buttonReset.onclick = () => {
       buttonRace.disabled = false;
-      //   const btnStop = document.querySelectorAll('.road-wrapper-button-stop');
-      // const btnStart = document.querySelectorAll('.road-wrapper-button-start');
       for (let i = 0; i < 100; i++) {
         carAnimations(i, 0, 'reset');
-        // @ts-ignore
-        //  btnStart[i].disabled = false;
-        //   btnStart[i].classList.add('enableds');
-
-        // @ts-ignore
-      //  btnStop[i].disabled = true;
-        //    btnStop[i].classList.add('disabled');
       }
     };
   });
