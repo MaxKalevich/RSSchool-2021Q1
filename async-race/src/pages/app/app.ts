@@ -12,7 +12,9 @@ const enum PageID {
 
 class App {
   private static container: HTMLElement = document.body;
+
   private static defaultPageID: string = PageID.CURRENT_PAGE;
+
   private initialPage: Garage;
 
   static renderNewPage(idPage: string): void {
@@ -37,11 +39,11 @@ class App {
     }
   }
 
-  enableRouteChange() {
+  enableRouteChange(): void {
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.slice(1);
       App.renderNewPage(hash);
-    })
+    });
   }
 
   constructor() {
@@ -51,7 +53,6 @@ class App {
   run(): void {
     new GarageButton(document.body);
     new WinnersButton(document.body);
-    App.renderNewPage(PageID.GARAGE_PAGE);
     this.enableRouteChange();
   }
 }

@@ -13,6 +13,7 @@
 
 .road-wrapper-road {
   height: 60px;
+  border-bottom: 2px white dotted;
 }
 
 .road-wrapper-road-finish {
@@ -59,4 +60,19 @@ top: -70px;
 
 .road-wrapper-button-remove:active {
   transform: scale(0.9);
+}
+
+.road-wrapper-road-car-name {
+  position: absolute;
+  width: 80px;
+  left: 0px;
+  top: -5px;
+}
+
+.road-wrapper-button-stop {
+  background-color: silver;
+}
+
+.road-wrapper-button-start {
+  background-color: pink;
 }

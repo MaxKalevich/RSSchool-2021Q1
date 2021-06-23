@@ -2,8 +2,8 @@ import App from '../../../pages/app/app';
 import './garageButton.scss';
 
 export class GarageButton {
-
   private readonly button: HTMLButtonElement;
+
   constructor(parent: HTMLElement) {
     this.button = document.createElement('button');
     this.button.className = 'garage-button';
@@ -15,5 +15,4 @@ export class GarageButton {
     };
     parent.append(this.button);
   }
-
 }
