@@ -1,5 +1,5 @@
 import './inputColorCreate.scss';
-import { stateObject } from '../../../pages/garage-page/garage';
+import {stateObject} from "../../../pages/garage-page/garage";
 
 export class InputColorCreate {
   private readonly input: HTMLInputElement;
@@ -9,11 +9,11 @@ export class InputColorCreate {
     this.input.className = 'input-color-create';
     this.input.type = 'color';
     parent.append(this.input);
-    this.input.addEventListener('input', () => this.getColor());
-    this.getColor();
+    this.input.addEventListener('input', () => this.getColor() )
+  this.getColor();
   }
 
-  getColor(): void {
+  getColor() {
     stateObject.colorValue = this.input.value;
   }
 }

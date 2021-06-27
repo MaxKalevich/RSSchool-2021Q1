@@ -10,11 +10,10 @@ abstract class Page {
     const tagHtml = document.createElement('div');
     tagHtml.innerText = text;
     tagHtml.style.margin = '10px';
-    this.container.className = 'class-name-div';
     return tagHtml;
   }
 
-  render(): HTMLElement {
+  render() {
     return this.container;
   }
 }

@@ -1,0 +1,91 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(40deg, #00bf82, #0099ae);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 45px;
+  left:2px;
+  bottom: -1px;
+  top: 2px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:checked + .slider {
+  background: linear-gradient(
+      40deg
+    ,#ffd86f,#fc6262);
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  transform: translateX(60px);
+}
+
+.text {
+  color: white;
+}
+
+.text:after {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  content: "TRAIN";
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.text:before {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  content: "PLAY";
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+input + .slider + .text:after {
+  opacity: 1;
+}
+input + .slider + .text:before {
+  opacity: 0;
+}
+
+
+input:checked + .slider + .text:after {
+  opacity: 0;
+}
+
+input:checked + .slider + .text:before {
+  opacity: 1;
+}

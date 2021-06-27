@@ -13,7 +13,7 @@ const devServer = (isDev) => !isDev ? {} : {
   },
 };
 
- const esLintPlugin = (isDev) => isDev ? [] : [ new ESLintPlugin({ extensions: ['ts', 'js'] }) ];
+const esLintPlugin = (isDev) => isDev ? [] : [ new ESLintPlugin({ extensions: ['ts', 'js'] }) ];
 
 module.exports = ({ development }) => ({
   mode: development ? 'development' : 'production',

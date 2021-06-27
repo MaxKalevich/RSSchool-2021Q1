@@ -2,13 +2,11 @@ import './createButton.scss';
 
 import { stateObject } from '../../../pages/garage-page/garage';
 import { addCarInGarage } from '../../../asyncRaceAPI';
-import App from '../../../pages/app/app';
+import App from "../../../pages/app/app";
 
 export class CreateButton {
+
   createButton: HTMLButtonElement;
-
-  private flag = true;
-
   constructor(parent: HTMLElement) {
     this.createButton = document.createElement('button');
     this.createButton.className = 'create-button';
@@ -17,18 +15,21 @@ export class CreateButton {
     this.createButton.onclick = () => this.onClick();
   }
 
-  onClick(): void {
-    if (stateObject.inputValue !== '') {
-      this.flag = false;
-      addCarInGarage(stateObject.inputValue, stateObject.colorValue);
+  onClick() {
+    if (stateObject.inputValue === '') {
+      console.log("Нет значений");
+    }
+    else {
+      addCarInGarage(stateObject.inputValue, stateObject.colorValue).then(res => console.log());
       App.renderNewPage('garage-page');
       stateObject.inputValue = '';
-      const input:HTMLInputElement | null = document.querySelector('.input-create');
-      const inputColor: HTMLInputElement | null = document.querySelector('.input-color-create');
-      if (input !== null && inputColor !== null) {
-        input.value = '';
-        inputColor.value = '';
-      }
+      // @ts-ignore
+      const input = document.querySelector('.input-create');
+      const inputColor = document.querySelector('.input-color-create');
+      // @ts-ignore
+      input.value = '';
+      // @ts-ignore
+      inputColor.value = '';
     }
   }
 }

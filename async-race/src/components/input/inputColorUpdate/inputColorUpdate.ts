@@ -9,11 +9,11 @@ export class InputColorUpdate {
     this.input.className = 'input-color-update';
     this.input.type = 'color';
     parent.append(this.input);
-    this.input.addEventListener('input', () => this.getColor());
+    this.input.addEventListener('input', () => this.getColor() )
     this.getColor();
   }
 
-  getColor(): void {
+  getColor() {
     stateObject.updateColorValue = this.input.value;
   }
 }
