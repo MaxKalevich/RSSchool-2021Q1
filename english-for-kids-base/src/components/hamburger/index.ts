@@ -15,8 +15,8 @@ const Buttons = [
     text: 'Action (Set B)',
   },
   {
-    id: PageIds.actionSetC,
-    text: 'Action (Set C)',
+    id: PageIds.auto,
+    text: 'Auto',
   },
   {
     id: PageIds.adjective,
@@ -41,14 +41,14 @@ const Buttons = [
 ];
 
 class Hamburger {
-  private divWrapper: HTMLElement;
+  private readonly divWrapper: HTMLElement;
 
   constructor() {
     this.divWrapper = document.createElement('div');
     this.divWrapper.className = 'hamburger-menu';
   }
 
-  createHamburger() {
+  createHamburger(): HTMLElement {
     const input: HTMLInputElement = document.createElement('input');
     input.type = 'checkbox';
     input.id = 'menu__toggle';
@@ -71,15 +71,20 @@ class Hamburger {
     a.innerText = 'Select a category for the game';
     ul.append(a);
 
-    const burgerButton = document.createElement('div');
+    const burgerButton: HTMLElement = document.createElement('div');
     burgerButton.className = 'burger-button-container';
     Buttons.forEach((button) => {
       const buttonTagHtml = document.createElement('a');
       buttonTagHtml.href = `#${button.id}`;
+      buttonTagHtml.className = 'sidebar-link';
       buttonTagHtml.innerText = button.text;
       burgerButton.append(buttonTagHtml);
     });
     ul.append(burgerButton);
+
+    const burgerImage = document.createElement('a');
+    burgerImage.className = 'burger-image';
+    ul.appendChild(burgerImage);
     return this.divWrapper;
   }
 }

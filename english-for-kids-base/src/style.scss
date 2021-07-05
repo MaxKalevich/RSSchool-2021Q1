@@ -1,6 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  min-height: 90vh;
-  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(45deg, greenyellow, #FFF200, #FF0000);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  font-family: 'Kirang Haerang', cursive;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 .burger-button-container {
@@ -12,14 +33,16 @@ body {
 a {
   margin: 10px;
   text-decoration: none;
+  font-size: 25px;
   color: whitesmoke;
   width: 260px;
 }
 
 .header-wrapper {
   display: flex;
-  justify-content: flex-end;
-  margin: 40px auto 0;
+  justify-content: space-between;
+  margin: 3% 6%;
+  height: 90px;
 }
 
 #current-page {
@@ -27,11 +50,14 @@ a {
   min-height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-
-
-
+.heading-all-pages {
+  width: 100%;
+  margin: 0 0 0 40px;
+  font-size: 45px;
+  animation: mig 5s infinite;
+  color: green;
+}

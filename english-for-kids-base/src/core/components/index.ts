@@ -1,51 +1,50 @@
 import Component from '../templates/components';
-import { PageIds } from '../../pages/app';
 import ToggleButton from '../../components/toggleButton';
 import Hamburger from '../../components/hamburger';
-
-// const Buttons = [
-//   {
-//     id: PageIds.mainPage,
-//     text: 'Main Page',
-//   },
-//   {
-//     id: PageIds.actionSetA,
-//     text: 'Action Set A',
-//   },
-//   {
-//     id: PageIds.actionSetB,
-//     text: 'Action Set B',
-//   },
-// ];
+import './style_header.scss';
+import App from '../../pages/app';
 
 class Header extends Component {
   private buttonSwitch: ToggleButton;
+
+  private readonly header: HTMLAnchorElement;
 
   private hamburger: Hamburger;
 
   constructor(tagName: string, className: string) {
     super(tagName, className);
+    this.header = document.createElement('a');
+    this.header.style.width = '480px';
     this.buttonSwitch = new ToggleButton();
     this.hamburger = new Hamburger();
   }
 
-  renderPageElements() {
-    // const burgerButton = document.createElement('div');
-    // burgerButton.className = 'burger-button-container';
-    // Buttons.forEach((button) => {
-    //   const buttonTagHtml = document.createElement('a');
-    //   buttonTagHtml.href = `#${button.id}`;
-    //   buttonTagHtml.innerText = button.text;
-    //   burgerButton.append(buttonTagHtml);
-    // });
-    // this.container.append(burgerButton);
+  createHeaderTitle(text: string): HTMLElement {
+    this.header.textContent = text;
+    this.header.href = '#main-page';
+    this.header.className = 'game-name';
+    return this.header;
+  }
+
+  createImg(image: string): HTMLElement {
+    const img = document.createElement('a');
+    img.className = 'logo';
+    img.style.backgroundImage = `url('./${image}')`;
+    img.style.backgroundSize = 'cover';
+    img.style.backgroundPosition = '25% 55%';
+    img.style.width = '140px';
+    img.style.position = 'relative';
+    img.style.top = '-25px';
+    img.style.height = '140px';
+    return img;
   }
 
   render() {
-   // this.renderPageElements();
-    this.container.append(this.buttonSwitch.createButton());
     this.container.append(this.hamburger.createHamburger());
-
+    this.container.append(this.createImg('compot.png'));
+    this.container.append(this.createHeaderTitle('ENGLISH KITTENS'));
+    this.container.append(this.createImg('caramelka.png'));
+    this.container.append(this.buttonSwitch.createButtonSwitch());
     return this.container;
   }
 }

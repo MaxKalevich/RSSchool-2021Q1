@@ -3,27 +3,30 @@ import Page from '../../core/templates/page';
 import ActionSetA from '../actionSetA';
 import ActionSetB from '../actionSetB';
 import Header from '../../core/components';
-import ErrorPage, { ErrorTypes } from '../error';
+
 import ToggleButton from '../../components/toggleButton';
 import Hamburger from '../../components/hamburger';
-import ActionSetC from '../actionSetC';
+
 import Emotion from '../emotion';
 import AnimalSetA from '../animalSetA';
 import AnimalSetB from '../animalSetB';
 import Clothes from '../clothes';
 import Adjective from '../adjective';
+import ActionSetC from '../auto';
+import WinnerPage, { WinnerTypes } from '../winnerPage';
 
 export const enum PageIds {
   mainPage = 'main-page',
   actionSetA = 'actionSetA-page',
   actionSetB = 'actionSetB-page',
-  actionSetC = 'actionSetC-page',
+  auto = 'Auto',
   adjective = 'adjective-page',
   emotion = 'emotion-page',
   animalSetA = 'animalSetA-page',
   animalSetB = 'animalSetB-page',
   clothes = 'clothes-page',
   currPage = 'current-page',
+  winnerPage = 'winner-page',
 }
 
 class App {
@@ -54,7 +57,7 @@ class App {
       page = new ActionSetA(idPage);
     } else if (idPage === PageIds.actionSetB) {
       page = new ActionSetB(idPage);
-    } else if (idPage === PageIds.actionSetC) {
+    } else if (idPage === PageIds.auto) {
       page = new ActionSetC(idPage);
     } else if (idPage === PageIds.emotion) {
       page = new Emotion(idPage);
@@ -66,8 +69,8 @@ class App {
       page = new Adjective(idPage);
     } else if (idPage === PageIds.clothes) {
       page = new Clothes(idPage);
-    } else {
-      page = new ErrorPage(idPage, ErrorTypes.ERROR_404);
+    } else if (idPage === PageIds.winnerPage) {
+      page = new WinnerPage(idPage, WinnerTypes.WINNER);
     }
 
     if (page) {
@@ -97,6 +100,22 @@ class App {
     this.enableRouteChange();
     // @ts-ignore
     window.lication = '#main-page';
+
+    const wrapper = document.querySelector('.burger-button-container');
+
+    let selectedTd: HTMLElement;
+    function highlight(td: any) {
+      if (selectedTd) { // убрать существующую подсветку, если есть
+        selectedTd.classList.remove('active');
+      }
+      selectedTd = td;
+      selectedTd.classList.add('active'); // подсветить новый td
+    }
+    // @ts-ignore
+    wrapper.onclick = function(event) {
+      let target = event.target; // где был клик?
+      highlight(target); // подсветить
+    };
   }
 }
 

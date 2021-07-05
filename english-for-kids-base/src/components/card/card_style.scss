@@ -1,11 +1,10 @@
 .card__front {
- // background-image: url('/public/categoryActionSetA/cry.jpg');
   background-position: center;
   background-size: cover;
+  border-radius: 19px 19px 19px 19px;
 }
 
 .card__back {
- // background-image: url('/public/categoryActionSetA/cry.jpg');
   background-position: center;
   background-size: cover;
   transform: rotateY(180deg);
@@ -22,34 +21,31 @@
 }
 
 .card-container {
-  width: 1000px;
+  width: 100%;
   flex-wrap: wrap;
   flex: 1 0 20%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 1%;
-  perspective: 35rem;
-  margin-top: 50px;
-
+  margin: 0 7%;
+  perspective: 70rem;
 }
 
 .card:hover {
   cursor: pointer;
-  box-shadow: 0 0 0.5rem black;
- // transform: translateZ(0.1rem);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
 }
 
 .card {
   width: 298px;
   height: 248px;
   transform-style: preserve-3d;
-  transition: all .3s;
+  transition: all .5s;
   transform-origin: right;
   position: relative;
-  box-shadow: 0 0 0.25rem black;
-  border-radius: .5rem;
-  margin: 10px
+  box-shadow: 1px 3px 4px rgb(0 0 0 / 5%);
+  border-radius: 19px 19px 19px 19px;
+  margin: 10px;
 }
 
 .card > .card__front,
@@ -60,7 +56,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: .5rem;
+  border-radius: 19px 19px 19px 19px;
   display: flex;
   flex-direction: column-reverse;
   text-align: center;
@@ -72,23 +68,26 @@
   transform-origin: left;
 }
 
-.card-header {
+.card-signature {
   background-color: #fff;
   color: black;
   height: 30px;
   border-radius: 0 0 .5rem .5rem;
   padding-top: 5px;
+  transition: margin-bottom 2s;
+  font-size: 23px;
 }
 
-.card-header-double {
+.card-signature-back {
   background-color: #fff;
   color: black;
   height: 30px;
   border-radius: 0 0 .5rem .5rem;
-  padding-top: 5px;
+  padding-top: 0;
+  font-size: 23px;
 }
 
-.rotate {
+.rotate-icon {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -99,5 +98,67 @@
   right: 5px;
   transition: .3s;
   filter: grayscale(1);
-  background-image: url('/public/rotate.svg');
+  background-image: url('/public/revert.png');
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 0 25px;
+  font-size: 42px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 650px;
+  height: 65px;
+  background: linear-gradient(
+      40deg
+    ,#fc00ff,#ff0000);
+  color: #fff;
+  border-radius: 10px;
+  border-width: 1px;
+  -webkit-transition: .3s;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btns {
+  width: 100%;
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.start-game {
+  visibility: visible;
+}
+
+.game {
+  box-sizing: border-box;
+  padding: 45px 17px;
+  font-size: 42px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
+  height: 140px;
+  background: linear-gradient(
+      40deg
+    ,#fc00ff,#ff0000);
+  color: #fff;
+  border-width: 1px;
+  -webkit-transition: .3s;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.game:active {
+  transform: scale(1.05);
+}
+
+.check {
+  opacity: 0.6;
 }
