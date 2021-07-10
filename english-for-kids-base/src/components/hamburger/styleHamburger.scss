@@ -116,19 +116,19 @@
   text-decoration: underline;
 }
 
-.burger-image {
-  background-image: url('/public/877951.png');
-  background-size: cover;
-  padding-left: 70px;
-  padding-bottom: 41px;
-  width: 40px;
-  height: 50px;
-}
-
-.burger-image:hover {
-  animation: fadein 5s;
-  cursor: pointer;
-}
+//.burger-image {
+//  background-image: url('/public/877951.png');
+//  background-size: cover;
+//  padding-left: 70px;
+//  padding-bottom: 41px;
+//  width: 40px;
+//  height: 50px;
+//}
+//
+//.burger-image:hover {
+//  animation: fadein 5s;
+//  cursor: pointer;
+//}
 
 @keyframes fadein {
   from {
@@ -141,4 +141,19 @@
 
 .menu__btn:hover {
   cursor: pointer;
+}
+
+.login {
+  font-size: 40px;
+  border: 2px red solid;
+  border-radius: 5px;
+  background-color: yellow;
+  padding: 0 20px;
+  color: red;
+  cursor: pointer;
+  font-family: 'Kirang Haerang', cursive;
+}
+
+.login:hover {
+  opacity: 0.5;
 }

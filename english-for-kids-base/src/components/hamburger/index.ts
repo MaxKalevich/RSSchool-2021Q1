@@ -1,5 +1,6 @@
 import './styleHamburger.scss';
 import { PageIds } from '../../pages/app';
+import ModalWindow from "../modalWindow";
 
 const Buttons = [
   {
@@ -43,9 +44,12 @@ const Buttons = [
 class Hamburger {
   private readonly divWrapper: HTMLElement;
 
+  private modal: ModalWindow;
+
   constructor() {
     this.divWrapper = document.createElement('div');
     this.divWrapper.className = 'hamburger-menu';
+    this.modal = new ModalWindow();
   }
 
   createHamburger(): HTMLElement {
@@ -82,9 +86,17 @@ class Hamburger {
     });
     ul.append(burgerButton);
 
-    const burgerImage = document.createElement('a');
-    burgerImage.className = 'burger-image';
-    ul.appendChild(burgerImage);
+    const login = document.createElement('button');
+    login.className = 'login';
+    login.textContent = 'Login';
+    login.addEventListener('click', () => {
+      const modal = document.getElementById('modal');
+      if (modal !== null) {
+        modal.style.display = 'block';
+      }
+    });
+    ul.appendChild(login);
+    this.modal.render(this.divWrapper);
     return this.divWrapper;
   }
 }

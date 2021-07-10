@@ -3,6 +3,7 @@ import ToggleButton from '../../components/toggleButton';
 import Hamburger from '../../components/hamburger';
 import './style_header.scss';
 import App from '../../pages/app';
+import ModalWindow from '../../components/modalWindow';
 
 class Header extends Component {
   private buttonSwitch: ToggleButton;

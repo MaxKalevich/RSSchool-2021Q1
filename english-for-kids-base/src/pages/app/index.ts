@@ -26,7 +26,7 @@ export const enum PageIds {
   animalSetB = 'animalSetB-page',
   clothes = 'clothes-page',
   currPage = 'current-page',
-  winnerPage = 'winner-page',
+  winnerPage = 'winner-page'
 }
 
 class App {
