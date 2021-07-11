@@ -1,0 +1,52 @@
+.head {
+  width: 100%;
+  background-color: yellow;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-wrapper {
+  display: flex;
+}
+
+.log-out {
+  width: 20%;
+  font-size: 35px;
+  color: purple;
+  background: none;
+  font-family: 'Kirang Haerang', cursive;
+  transition: .1s;
+ }
+
+.log-out:active {
+  transform: scale(0.9);
+}
+
+.categories,
+.words {
+  font-size: 35px;
+  color: purple;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.words:active {
+  transform: scale(0.9);
+}
+
+.categories:active {
+  transform: scale(0.9);
+}
+
+.content-wrapper {
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1%;
+  perspective: 35rem;
+}

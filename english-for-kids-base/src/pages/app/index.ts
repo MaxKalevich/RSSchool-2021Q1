@@ -14,6 +14,8 @@ import Clothes from '../clothes';
 import Adjective from '../adjective';
 import ActionSetC from '../auto';
 import WinnerPage, { WinnerTypes } from '../winnerPage';
+import AdminCategoriesPage from '../adminPages/categoriesPage';
+import AdminWordsPage from '../adminPages/wordsPage';
 
 export const enum PageIds {
   mainPage = 'main-page',
@@ -26,7 +28,9 @@ export const enum PageIds {
   animalSetB = 'animalSetB-page',
   clothes = 'clothes-page',
   currPage = 'current-page',
-  winnerPage = 'winner-page'
+  winnerPage = 'winner-page',
+  adminCategoriesPage = 'admin-categories-page',
+  adminWordsPage = 'admin-words-page'
 }
 
 class App {
@@ -42,7 +46,7 @@ class App {
 
   private hamburger: Hamburger;
 
-  static renderNewPage(idPage: string) {
+  static renderNewPage(idPage: string): void {
     const currentPage = document.querySelector(`#${App.defaultPageId}`);
 
     if (currentPage) {
@@ -71,6 +75,10 @@ class App {
       page = new Clothes(idPage);
     } else if (idPage === PageIds.winnerPage) {
       page = new WinnerPage(idPage, WinnerTypes.WINNER);
+    } else if (idPage === PageIds.adminCategoriesPage) {
+      page = new AdminCategoriesPage(idPage);
+    } else if (idPage === PageIds.adminWordsPage) {
+      page = new AdminWordsPage(idPage);
     }
 
     if (page) {
@@ -89,6 +97,7 @@ class App {
 
   constructor() {
     this.initialPage = new MainPage('main-page');
+  //  this.initialPage = new AdminCategoriesPage('admin-categories-page');
     this.header = new Header('header', 'header-wrapper');
     this.buttonSwitch = new ToggleButton();
     this.hamburger = new Hamburger();
@@ -97,6 +106,7 @@ class App {
   run() {
     App.container.append(this.header.render());
     App.renderNewPage(PageIds.mainPage);
+  //  App.renderNewPage(PageIds.adminCategoriesPage);
     this.enableRouteChange();
     // @ts-ignore
     window.lication = '#main-page';
