@@ -1,4 +1,4 @@
-.card__front_main {
+.card-main-admin {
   background-position: center;
   background-size: cover;
 }
@@ -13,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-.card-container {
+.card-container-admin {
   width: 100%;
   flex-wrap: wrap;
   flex: 1 0 20%;
@@ -25,12 +25,12 @@
 
 }
 
-.card:hover {
+.card-admin:hover {
   cursor: pointer;
   box-shadow: 0 0 0.5rem black;
 }
 
-.card {
+.card-admin {
   width: 298px;
   height: 248px;
   transform-style: preserve-3d;
@@ -46,7 +46,7 @@
   font-size: 23px;
 }
 
-.card-signature_main {
+.card-signature-admin {
   color: black;
   height: 30px;
   border-radius: 0 0 0.5rem 0.5rem;
@@ -58,7 +58,7 @@
   animation: mig  5s infinite;
 }
 
-.card-signature_main_2 {
+.card-signature-admin2 {
   color: black;
   height: 30px;
   border-radius: 0 0 0.5rem 0.5rem;
@@ -85,8 +85,7 @@
   }
 }
 
-.card_main > .card__front_main,
-.card__back {
+.card-admin > .card-main-admin {
   position: absolute;
   backface-visibility: hidden;
   top: 20px;
@@ -99,7 +98,7 @@
   border-radius: 50%;
 }
 
-.card_main {
+.card-admin {
   cursor: pointer;
   width: 298px;
   height: 248px;
@@ -116,7 +115,7 @@
   background-repeat: no-repeat;
 }
 
-.card_main:hover {
+.card-admin:hover {
   box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
   transform: scale(1.01);
 }

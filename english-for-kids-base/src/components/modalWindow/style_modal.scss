@@ -28,6 +28,8 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 30px;
+  outline:none;
 }
 
 button {
@@ -80,4 +82,12 @@ span.psw {
   background-color: cornsilk;
   width: 40%;
   margin: 0 auto;
+}
+
+.submit, .cancelbtn {
+  border-radius: 30px;
+}
+
+.imgcontainer {
+  font-size: 35px;
 }

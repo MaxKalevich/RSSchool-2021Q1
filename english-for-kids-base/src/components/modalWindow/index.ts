@@ -1,5 +1,4 @@
 import './style_modal.scss';
-import CategoriesPage from "../../pages/adminPages/categoriesPage";
 
 class ModalWindow {
   private readonly container: HTMLElement;
@@ -63,6 +62,7 @@ class ModalWindow {
     const btn: HTMLButtonElement = document.createElement('button');
     btn.textContent = 'Send';
     btn.type = 'submit';
+    btn.className = 'submit';
     divContainer.append(btn);
 
     const btnCancel: HTMLButtonElement = document.createElement('button');

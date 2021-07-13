@@ -16,6 +16,7 @@ import ActionSetC from '../auto';
 import WinnerPage, { WinnerTypes } from '../winnerPage';
 import AdminCategoriesPage from '../adminPages/categoriesPage';
 import AdminWordsPage from '../adminPages/wordsPage';
+import NoAuthorizedPage from "../noAuthorizedPage";
 
 export const enum PageIds {
   mainPage = 'main-page',
@@ -30,7 +31,8 @@ export const enum PageIds {
   currPage = 'current-page',
   winnerPage = 'winner-page',
   adminCategoriesPage = 'admin-categories-page',
-  adminWordsPage = 'admin-words-page'
+  adminWordsPage = 'admin-words-page',
+  noAuthorizedPage = 'no-authorized'
 }
 
 class App {
@@ -79,6 +81,8 @@ class App {
       page = new AdminCategoriesPage(idPage);
     } else if (idPage === PageIds.adminWordsPage) {
       page = new AdminWordsPage(idPage);
+    } else if (idPage === PageIds.noAuthorizedPage) {
+      page = new NoAuthorizedPage(idPage);
     }
 
     if (page) {
@@ -91,7 +95,15 @@ class App {
   private enableRouteChange() {
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash.slice(1);
-      App.renderNewPage(hash);
+      if (hash === PageIds.adminCategoriesPage && !localStorage.getItem('token')) {
+        App.renderNewPage(PageIds.noAuthorizedPage);
+        setTimeout(() => {
+          App.renderNewPage(PageIds.mainPage);
+          history.pushState({}, 'null', '#main-page');
+        }, 5000);
+      } else {
+        App.renderNewPage(hash);
+      }
     });
   }
 

@@ -3,33 +3,6 @@
   background-size: cover;
 }
 
-.cards-field {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.card-container {
-  width: 100%;
-  flex-wrap: wrap;
-  flex: 1 0 20%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 1%;
-  perspective: 35rem;
-
-}
-
-.card:hover {
-  cursor: pointer;
-  box-shadow: 0 0 0.5rem black;
-}
-
 .card__new {
   width: 298px;
   height: 248px;
@@ -56,20 +29,6 @@
   100% {
     color: blue;
   }
-}
-
-.card_main > .card__front_main,
-.card__back {
-  position: absolute;
-  backface-visibility: hidden;
-  top: 20px;
-  left: 20px;
-  width: 40%;
-  height: 50%;
-  display: flex;
-  flex-direction: column-reverse;
-  text-align: center;
-  border-radius: 50%;
 }
 
 .card__new {
