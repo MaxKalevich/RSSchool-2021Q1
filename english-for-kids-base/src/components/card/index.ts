@@ -17,6 +17,8 @@ class Card {
 
   private stateWordShuffle: Array<string> | null;
 
+  private readonly rating: HTMLElement;
+
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'card-container';
@@ -27,6 +29,7 @@ class Card {
     this.count = 1;
     this.j = null;
     this.countBadResponse = 0;
+    this.rating = document.createElement('div');
   }
 
   createCard(textFront: string, textBack: string, img: string, directory: string): HTMLElement {
@@ -39,7 +42,8 @@ class Card {
 
     const cardFront: HTMLElement = document.createElement('div');
     cardFront.className = 'card__front';
-    cardFront.style.backgroundImage = `url('/${directory}/${img}.jpg')`;
+    cardFront.style.backgroundImage = `url('${img}')`;
+   // cardFront.style.backgroundImage = `url('/${directory}/${img}.jpg')`;
     cardFront.addEventListener('click', () => {
       if (!state.playGame) {
         this.audio.src = `/audio/${textFront}.mp3`;
@@ -47,7 +51,9 @@ class Card {
       }
       if (state.playGame && state.startGame) {
         if (textFront === state.currentWord && !cardFront.classList.contains('check')) {
-          console.log('Верно');
+          const imgStar: HTMLImageElement = document.createElement('img');
+          imgStar.src = '/true.png';
+          this.rating.append(imgStar);
           this.audio.src = '/audio/truffy.mp3';
           cardFront.classList.add('check');
           arr.push(textFront);
@@ -59,6 +65,7 @@ class Card {
             ++this.count;
           }, 1000);
           if (this.count === 8 && this.countBadResponse === 0) {
+            state.startGame = false;
             clearTimeout(setTime);
             this.audio.src = '/audio/winner.mp3';
             App.renderNewPage('winner-page');
@@ -69,6 +76,7 @@ class Card {
             history.pushState({}, 'null', '#main-page');
         }
           if (this.count === 8 && this.countBadResponse !== 0) {
+            state.startGame = false;
             clearTimeout(setTime);
             const curPage = document.getElementById('current-page');
             if (curPage !== null) {
@@ -98,7 +106,9 @@ class Card {
         }
         if (textFront !== state.currentWord) {
           if (!cardFront.classList.contains('check')) {
-            console.log('Неверно');
+            const imgStar: HTMLImageElement = document.createElement('img');
+            imgStar.src = '/unnamed.png';
+            this.rating.append(imgStar);
             ++this.countBadResponse;
             this.audio.src = '/audio/error.mp3';
             this.playAudio();
@@ -123,7 +133,7 @@ class Card {
         card.classList.remove('flipped');
       }
     });
-    cardBack.style.backgroundImage = `url('/${directory}/${img}.jpg')`;
+    cardBack.style.backgroundImage = `url('${img}')`;;
     card.append(cardBack);
 
     const cardSignatureBack: HTMLElement = document.createElement('div');
@@ -143,6 +153,11 @@ class Card {
 
     this.container.appendChild(this.audio);
     return this.container;
+  }
+
+  createRating(): HTMLElement {
+    this.rating.className = 'rating';
+    return this.rating;
   }
 
   playAudio(): void {

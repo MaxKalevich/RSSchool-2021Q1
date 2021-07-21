@@ -115,7 +115,6 @@
   color: #fff;
   border-radius: 10px;
   border-width: 1px;
-  -webkit-transition: .3s;
   text-align: center;
   cursor: pointer;
   text-transform: uppercase;
@@ -161,4 +160,17 @@
 
 .check {
   opacity: 0.6;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  height: 60px;
+  overflow-x: hidden;
+  line-height: 36px;
+  font-size: 36px;
+  color: #fc6262;
 }

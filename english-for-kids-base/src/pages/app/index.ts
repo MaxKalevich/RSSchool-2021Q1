@@ -101,6 +101,12 @@ class App {
           App.renderNewPage(PageIds.mainPage);
           history.pushState({}, 'null', '#main-page');
         }, 5000);
+      } else if (hash === PageIds.adminWordsPage && !localStorage.getItem('token')) {
+        App.renderNewPage(PageIds.noAuthorizedPage);
+        setTimeout(() => {
+          App.renderNewPage(PageIds.mainPage);
+          history.pushState({}, 'null', '#main-page');
+        }, 5000);
       } else {
         App.renderNewPage(hash);
       }
@@ -127,16 +133,16 @@ class App {
 
     let selectedTd: HTMLElement;
     function highlight(td: any) {
-      if (selectedTd) { // убрать существующую подсветку, если есть
+      if (selectedTd) {
         selectedTd.classList.remove('active');
       }
       selectedTd = td;
-      selectedTd.classList.add('active'); // подсветить новый td
+      selectedTd.classList.add('active');
     }
     // @ts-ignore
     wrapper.onclick = function(event) {
-      let target = event.target; // где был клик?
-      highlight(target); // подсветить
+      let target = event.target;
+      highlight(target);
     };
   }
 }

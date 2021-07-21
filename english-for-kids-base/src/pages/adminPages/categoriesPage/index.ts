@@ -2,6 +2,8 @@ import './style_words.scss';
 import Page from '../../../core/templates/page';
 import CardAdminCategories from '../../../components/cardAdminCategories';
 import CreateNewCategory from '../../../components/createNewCategoryCard';
+import App from '../../app/index';
+import { getCategories } from './../../../EFK-API/categoriesAPI';
 
 class AdminCategoriesPage extends Page {
   private card: CardAdminCategories;
@@ -38,6 +40,18 @@ class AdminCategoriesPage extends Page {
     const logOut = document.createElement('button');
     logOut.className = 'log-out';
     logOut.textContent = 'Log Out';
+    logOut.addEventListener('click', () => {
+      localStorage.removeItem('token');
+            console.log('Токен удален');
+            App.renderNewPage('main-page');
+            history.pushState({}, 'null', '#main-page');
+            const head = document.querySelector('.header-wrapper');
+            console.log(head);
+            if (head !== null) {
+              // @ts-ignore
+              head.style.display = 'flex';
+            }
+    });
     head.append(logOut);
 
     const header: HTMLElement | null = document.querySelector('.header-wrapper');
@@ -49,12 +63,17 @@ class AdminCategoriesPage extends Page {
     mainContentWrapper.className = 'content-wrapper';
     this.container.append(mainContentWrapper);
 
-    mainContentWrapper.append(this.card.createCardMainPage('Auto', 'Auto', '7'));
-    mainContentWrapper.append(this.card.createCardMainPage('Clothes', 'Clothes', '7'));
-    mainContentWrapper.append(this.card.createCardMainPage('Animal', 'Clothes', '7'));
-    mainContentWrapper.append(this.card.createCardMainPage('Forest', 'Clothes', '7'));
-    mainContentWrapper.append(this.card.createCardMainPage('Films', 'Clothes', '7'));
+    getCategories().then(r => {
+      r.forEach((item: any) => {
+        item.filter((item: any) => {
+            if (item.category) {
+            console.log(item.category);
+            mainContentWrapper.append(this.card.createCardMainPage(item.category, item.category, '8'));
+            }
+        })
+    });
     mainContentWrapper.append(this.create.create());
+    })
     return this.container;
   }
 }

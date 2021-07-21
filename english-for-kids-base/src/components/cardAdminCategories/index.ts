@@ -1,4 +1,6 @@
 import './style_card_admin.scss';
+import { deleteCardCategory } from './../../EFK-API/categoriesAPI'
+import App from '../../pages/app';
 
 class CardAdminCategories {
   private readonly container: HTMLElement;
@@ -34,6 +36,13 @@ class CardAdminCategories {
 
     const buttonDelete = document.createElement('button');
     buttonDelete.className = 'btn-delete';
+    buttonDelete.addEventListener('click', () => {
+      deleteCardCategory(categoryName);
+      setTimeout(() => {
+        App.renderNewPage('admin-categories-page');
+      }, 1000);
+      
+    })
 
     buttonWrapper.append(buttonDelete);
 

@@ -1,4 +1,5 @@
 import Page from '../../../core/templates/page';
+import App from '../../app/index';
 
 class AdminWordsPage extends Page {
   constructor(id: string) {
@@ -29,6 +30,16 @@ class AdminWordsPage extends Page {
     const logOut = document.createElement('button');
     logOut.className = 'log-out';
     logOut.textContent = 'Log Out';
+    logOut.addEventListener('click', () => {
+      localStorage.removeItem('token');
+            App.renderNewPage('main-page');
+            history.pushState({}, 'null', '#main-page');
+            const head = document.querySelector('.header-wrapper');
+            if (head !== null) {
+              // @ts-ignore
+              head.style.display = 'flex';
+            }
+    });
     head.append(logOut);
 
     const header: HTMLElement | null = document.querySelector('.header-wrapper');
