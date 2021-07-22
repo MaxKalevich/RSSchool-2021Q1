@@ -9,12 +9,12 @@ class CreateNewCategory {
   }
 
   create(): HTMLElement {
-    const cardFront = document.createElement('div');
+    const cardFront: HTMLElement = document.createElement('div');
     cardFront.className = 'card__new';
     cardFront.style.backgroundImage = "url('/create.png')";
     this.container.append(cardFront);
 
-    const heading = document.createElement('h2');
+    const heading: HTMLHeadingElement = document.createElement('h2');
     heading.textContent = 'Create New Category';
     heading.style.textAlign = 'center';
     cardFront.append(heading);

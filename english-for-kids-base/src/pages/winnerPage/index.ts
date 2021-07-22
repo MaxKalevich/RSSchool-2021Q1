@@ -1,6 +1,6 @@
 import Page from '../../core/templates/page';
 
-export const enum WinnerTypes {
+export enum WinnerTypes {
   WINNER = 'Winner!',
 }
 

@@ -1,6 +1,6 @@
 import './styleHamburger.scss';
 import { PageIds } from '../../pages/app';
-import ModalWindow from "../modalWindow";
+import ModalWindow from '../modalWindow';
 
 const Buttons = [
   {
@@ -78,7 +78,7 @@ class Hamburger {
     const burgerButton: HTMLElement = document.createElement('div');
     burgerButton.className = 'burger-button-container';
     Buttons.forEach((button) => {
-      const buttonTagHtml = document.createElement('a');
+      const buttonTagHtml: HTMLAnchorElement = document.createElement('a');
       buttonTagHtml.href = `#${button.id}`;
       buttonTagHtml.className = 'sidebar-link';
       buttonTagHtml.innerText = button.text;
@@ -86,7 +86,7 @@ class Hamburger {
     });
     ul.append(burgerButton);
 
-    const login = document.createElement('button');
+    const login: HTMLButtonElement = document.createElement('button');
     login.className = 'login';
     login.textContent = 'Login';
     login.addEventListener('click', () => {

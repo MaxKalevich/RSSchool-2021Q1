@@ -1,6 +1,5 @@
 import './style.scss';
 import { state } from '../../stateApp/state';
-import App from "../../pages/app";
 
 class ToggleButton {
   private readonly tagLabel: HTMLLabelElement;
@@ -39,7 +38,7 @@ class ToggleButton {
         state.playGame = false;
 
         if (!state.playGame) {
-          const button = document.querySelector('.btn');
+          const button: HTMLButtonElement | null = document.querySelector('.btn');
           if (button !== null) {
             button.classList.remove('game');
             button.textContent = 'START GAME';

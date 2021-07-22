@@ -10,19 +10,18 @@ history.pushState({}, 'null', '#main-page');
 
 hideSidebar();
 
-const form = document.querySelector('.modal-content');
+const form: HTMLElement | null = document.querySelector('.modal-content');
 if (form !== null) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const inputName = document.getElementById('uname');
-    const inputPass = document.getElementById('psw');
-    const errorMessage = document.querySelector('.imgcontainer');
+    const inputName: HTMLElement | null = document.getElementById('uname');
+    const inputPass: HTMLElement | null = document.getElementById('psw');
+    const errorMessage: HTMLElement | null = document.querySelector('.imgcontainer');
     if (inputName && inputPass !== null) {
-      // @ts-ignore
       authUser(inputName.value, inputPass.value).then((r) => {
         if (r.message && errorMessage !== null) {
-            errorMessage.textContent = r.message;
-        } else {  
+          errorMessage.textContent = r.message;
+        } else {
           localStorage.setItem('token', r);
           App.renderNewPage('admin-categories-page');
           history.pushState({}, 'null', '#admin-categories-page');

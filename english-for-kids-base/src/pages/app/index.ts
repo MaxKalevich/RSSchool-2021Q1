@@ -13,12 +13,12 @@ import AnimalSetB from '../animalSetB';
 import Clothes from '../clothes';
 import Adjective from '../adjective';
 import ActionSetC from '../auto';
-import WinnerPage, { WinnerTypes } from '../winnerPage';
+import WinnerPage, {WinnerTypes} from '../winnerPage';
 import AdminCategoriesPage from '../adminPages/categoriesPage';
 import AdminWordsPage from '../adminPages/wordsPage';
-import NoAuthorizedPage from "../noAuthorizedPage";
+import NoAuthorizedPage from '../noAuthorizedPage';
 
-export const enum PageIds {
+export enum PageIds {
   mainPage = 'main-page',
   actionSetA = 'actionSetA-page',
   actionSetB = 'actionSetB-page',
@@ -32,7 +32,7 @@ export const enum PageIds {
   winnerPage = 'winner-page',
   adminCategoriesPage = 'admin-categories-page',
   adminWordsPage = 'admin-words-page',
-  noAuthorizedPage = 'no-authorized'
+  noAuthorizedPage = 'no-authorized',
 }
 
 class App {
@@ -50,13 +50,10 @@ class App {
 
   static renderNewPage(idPage: string): void {
     const currentPage = document.querySelector(`#${App.defaultPageId}`);
-
     if (currentPage) {
       currentPage.remove();
     }
-
     let page: Page | null = null;
-
     if (idPage === PageIds.mainPage) {
       page = new MainPage(idPage);
     } else if (idPage === PageIds.actionSetA) {
@@ -115,7 +112,6 @@ class App {
 
   constructor() {
     this.initialPage = new MainPage('main-page');
-  //  this.initialPage = new AdminCategoriesPage('admin-categories-page');
     this.header = new Header('header', 'header-wrapper');
     this.buttonSwitch = new ToggleButton();
     this.hamburger = new Hamburger();
@@ -124,14 +120,13 @@ class App {
   run() {
     App.container.append(this.header.render());
     App.renderNewPage(PageIds.mainPage);
-  //  App.renderNewPage(PageIds.adminCategoriesPage);
     this.enableRouteChange();
-    // @ts-ignore
     window.lication = '#main-page';
 
     const wrapper = document.querySelector('.burger-button-container');
 
     let selectedTd: HTMLElement;
+
     function highlight(td: any) {
       if (selectedTd) {
         selectedTd.classList.remove('active');
@@ -139,8 +134,8 @@ class App {
       selectedTd = td;
       selectedTd.classList.add('active');
     }
-    // @ts-ignore
-    wrapper.onclick = function(event) {
+
+    wrapper.onclick = function (event) {
       let target = event.target;
       highlight(target);
     };

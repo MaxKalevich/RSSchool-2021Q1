@@ -2,8 +2,6 @@ import Component from '../templates/components';
 import ToggleButton from '../../components/toggleButton';
 import Hamburger from '../../components/hamburger';
 import './style_header.scss';
-import App from '../../pages/app';
-import ModalWindow from '../../components/modalWindow';
 
 class Header extends Component {
   private buttonSwitch: ToggleButton;
@@ -28,7 +26,7 @@ class Header extends Component {
   }
 
   createImg(image: string): HTMLElement {
-    const img = document.createElement('a');
+    const img: HTMLAnchorElement = document.createElement('a');
     img.className = 'logo';
     img.style.backgroundImage = `url('./${image}')`;
     img.style.backgroundSize = 'cover';

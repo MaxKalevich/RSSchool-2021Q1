@@ -1,5 +1,4 @@
 import Page from '../../core/templates/page';
-import {WinnerTypes} from "../winnerPage";
 
 class NoAuthorizedPage extends Page {
   constructor(id: string) {

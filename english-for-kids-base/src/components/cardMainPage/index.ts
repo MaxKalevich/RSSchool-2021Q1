@@ -10,19 +10,19 @@ class CardMainPage {
   }
 
   createCardMainPage(text: string, id: string, image: string): HTMLElement {
-    const card = document.createElement('a');
+    const card: HTMLAnchorElement = document.createElement('a');
     card.className = 'card_main';
     card.style.backgroundImage = `url('/${image}')`;
     card.id = id;
     card.href = `#${id}`;
     this.container.append(card);
 
-    const cardFront = document.createElement('div');
+    const cardFront: HTMLElement = document.createElement('div');
     cardFront.className = 'card__front_main';
     cardFront.style.backgroundImage = `url('/categories/${text}.jpg')`;
     card.append(cardFront);
 
-    const cardHeader = document.createElement('div');
+    const cardHeader: HTMLElement = document.createElement('div');
     cardHeader.className = 'card-signature_main';
     if (state.playGame) {
       card.classList.add('start');

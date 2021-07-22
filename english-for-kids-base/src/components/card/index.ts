@@ -11,7 +11,7 @@ class Card {
 
   private countBadResponse: number;
 
-  private j: number | null;
+  private shuffleCount: number | null;
 
   private readonly stateWord: Array<string>;
 
@@ -27,7 +27,7 @@ class Card {
     this.stateWord = [];
     this.stateWordShuffle = null;
     this.count = 1;
-    this.j = null;
+    this.shuffleCount = null;
     this.countBadResponse = 0;
     this.rating = document.createElement('div');
   }
@@ -43,7 +43,6 @@ class Card {
     const cardFront: HTMLElement = document.createElement('div');
     cardFront.className = 'card__front';
     cardFront.style.backgroundImage = `url('${img}')`;
-   // cardFront.style.backgroundImage = `url('/${directory}/${img}.jpg')`;
     cardFront.addEventListener('click', () => {
       if (!state.playGame) {
         this.audio.src = `/audio/${textFront}.mp3`;
@@ -74,7 +73,7 @@ class Card {
               App.renderNewPage('main-page');
             }, 5000);
             history.pushState({}, 'null', '#main-page');
-        }
+          }
           if (this.count === 8 && this.countBadResponse !== 0) {
             state.startGame = false;
             clearTimeout(setTime);
@@ -133,7 +132,7 @@ class Card {
         card.classList.remove('flipped');
       }
     });
-    cardBack.style.backgroundImage = `url('${img}')`;;
+    cardBack.style.backgroundImage = `url('${img}')`;
     card.append(cardBack);
 
     const cardSignatureBack: HTMLElement = document.createElement('div');
@@ -146,11 +145,10 @@ class Card {
     if (state.playGame) {
       rotateIcon.classList.add('none');
     }
-    rotateIcon.onclick = () => {
+    rotateIcon.addEventListener('click', () => {
       card.classList.add('flipped');
-    };
+    });
     card.append(rotateIcon);
-
     this.container.appendChild(this.audio);
     return this.container;
   }
@@ -166,7 +164,7 @@ class Card {
   }
 
   createStartButton(): void {
-    const buttonContainer = document.createElement('div');
+    const buttonContainer: HTMLElement = document.createElement('div');
     buttonContainer.className = 'btns';
     this.container.appendChild(buttonContainer);
     const button = document.createElement('div');
@@ -206,8 +204,8 @@ class Card {
   shuffle(array: Array<string>): Array<string> {
     const newArr: Array<string> = array;
     for (let i = newArr.length - 1; i > 0; i--) {
-      this.j = Math.floor(Math.random() * (i + 1));
-      [newArr[i], newArr[this.j]] = [newArr[this.j], newArr[i]];
+      this.shuffleCount = Math.floor(Math.random() * (i + 1));
+      [newArr[i], newArr[this.shuffleCount]] = [newArr[this.shuffleCount], newArr[i]];
     }
     return newArr;
   }

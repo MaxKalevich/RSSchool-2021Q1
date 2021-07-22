@@ -7,38 +7,37 @@ class AdminWordsPage extends Page {
   }
 
   render(): HTMLElement {
-    const head = document.createElement('header');
+    const head: HTMLElement = document.createElement('header');
     head.className = 'head';
     this.container.append(head);
 
-    const catWrapper = document.createElement('div');
+    const catWrapper: HTMLElement = document.createElement('div');
     catWrapper.className = 'cat-wrapper';
     head.append(catWrapper);
 
-    const categories = document.createElement('a');
+    const categories: HTMLAnchorElement = document.createElement('a');
     categories.className = 'categories';
     categories.href = '#admin-categories-page';
     categories.textContent = 'Categories';
     catWrapper.append(categories);
 
-    const words = document.createElement('a');
+    const words: HTMLAnchorElement = document.createElement('a');
     words.className = 'words';
     words.href = '#admin-words-page';
     words.textContent = 'Words';
     catWrapper.append(words);
 
-    const logOut = document.createElement('button');
+    const logOut: HTMLButtonElement = document.createElement('button');
     logOut.className = 'log-out';
     logOut.textContent = 'Log Out';
     logOut.addEventListener('click', () => {
       localStorage.removeItem('token');
-            App.renderNewPage('main-page');
-            history.pushState({}, 'null', '#main-page');
-            const head = document.querySelector('.header-wrapper');
-            if (head !== null) {
-              // @ts-ignore
-              head.style.display = 'flex';
-            }
+      App.renderNewPage('main-page');
+      history.pushState({}, 'null', '#main-page');
+      const head = document.querySelector('.header-wrapper');
+      if (head !== null) {
+        head.style.display = 'flex';
+      }
     });
     head.append(logOut);
 

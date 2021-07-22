@@ -28,12 +28,11 @@ export async function getCategories() {
 }
 
 export async function deleteCardCategory(categoryName: string) {
-
 const body = {
-  "category": categoryName
-}
+  category: categoryName,
+};
 
-  const url = `http://localhost:3000/api/category/`;
+  const url = 'http://localhost:3000/api/category/';
   const res = await fetch(url, {
     method: 'DELETE',
     headers: {
@@ -41,5 +40,4 @@ const body = {
     },
     body: JSON.stringify(body),
   });
-  const data = await res.json();
 }

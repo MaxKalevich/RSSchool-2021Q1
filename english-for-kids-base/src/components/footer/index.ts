@@ -13,13 +13,13 @@ class Footer {
     createdYear.innerText = '2021';
     this.container.append(createdYear);
 
-    const linkAuthor = document.createElement('a');
+    const linkAuthor: HTMLAnchorElement = document.createElement('a');
     linkAuthor.className = 'link_author';
     linkAuthor.href = 'https://github.com/MaxKalevich';
     linkAuthor.target = 'blank_1';
     this.container.append(linkAuthor);
 
-    const rsLogo = document.createElement('a');
+    const rsLogo: HTMLAnchorElement = document.createElement('a');
     rsLogo.className = 'rs-school';
     rsLogo.href = 'https://rs.school/js/';
     rsLogo.target = 'blank_1';

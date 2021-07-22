@@ -20,3 +20,4 @@ module.exports = function (req: any, res: any, next: any) {
         return res.status(403).json({message: 'Пользователь не авторизован'});
     }
 };
+

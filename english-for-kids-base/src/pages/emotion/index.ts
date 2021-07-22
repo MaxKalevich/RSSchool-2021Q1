@@ -3,10 +3,6 @@ import Card from '../../components/card';
 import Footer from '../../components/footer';
 import { getCategories } from '../../EFK-API/categoriesAPI';
 
-// const namePicturesEn: Array<string> = ['angry', 'happy', 'laugh', 'sad', 'scared', 'smile', 'surprised', 'tired'];
-// const namePicturesRu: Array<string> = ['сердитый', 'счастливый', 'смех',
-//   'грустный', 'испуганный', 'улыбка', 'удивленный', 'уставший'];
-
 class Emotion extends Page {
   private card: Card;
 
@@ -24,13 +20,13 @@ class Emotion extends Page {
     title.style.width = '100%';
     this.container.append(title);
     this.container.append(this.card.createRating());
-    getCategories().then(r => {
+    getCategories().then((r) => {
       r.forEach((item: any) => {
-        item.filter((item: any) => {
-          if (item.word !== undefined && item.category === 'Emotion') {
-            this.container.append(this.card.createCard(item.word, item.translation,
-              item.img, 'Emotion'));
-          };
+        item.filter((items: any) => {
+          if (items.word !== undefined && items.category === 'Emotion') {
+            this.container.append(this.card.createCard(items.word, items.translation,
+              items.img, 'Emotion'));
+          }
         });
     });
     this.card.createStartButton();
