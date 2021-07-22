@@ -1,6 +1,4 @@
-// @ts-ignore
 const jwt = require('jsonwebtoken');
-// @ts-ignore
 const { secret } = require('../config')
 
 module.exports = function (req: any, res: any, next: any) {
@@ -20,4 +18,3 @@ module.exports = function (req: any, res: any, next: any) {
         return res.status(403).json({message: 'Пользователь не авторизован'});
     }
 };
-

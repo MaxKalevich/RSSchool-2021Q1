@@ -1,88 +1,3 @@
-import { Category } from './category';
-
-let categories: Category[] = [
-    {
-        category: 'Action (Set A)',
-        word: 'cry',
-        translation: 'плакать',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 1
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'dance',
-        translation: 'танцевать',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 2
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'dive',
-        translation: 'нырять',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 3
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'draw',
-        translation: 'рисовать',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 4
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'fish',
-        translation: 'ловить рыбу',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 5
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'fly',
-        translation: 'летать',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 6
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'hug',
-        translation: 'обнимать',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 7
-    },
-    {
-        category: 'Action (Set A)',
-        word: 'jump',
-        translation: 'прыгать',
-        trained: '0',
-        correct: '0',
-        incorrect: '0',
-        percent: '0',
-        id: 8
-    }
-];
-
 const state = [
     [
         {
@@ -818,75 +733,31 @@ const state = [
     ]
 ];
 
-const newId = (function() {
-    let id = categories.length;
+const newId = (function () {
+    let id = state.length;
     return () => id++;
 })();
-
-export function getCategories(): Promise<Category[]> {
-    return Promise.resolve(categories);
-}
 
 export function getCategoriesState(): Promise<any> {
     return Promise.resolve(state);
 }
 
-export function getCategoryById(id: number): Promise<Category | undefined> {
-    const category = categories.find((cat) => cat.id === id);
-    return Promise.resolve(category);
+export function deleteCategoryByCategoryName(categoryName: string) {
+    let stateOne = state[0].filter(el => {
+        if (el.category !== categoryName) {
+            return el;
+        }
+    });
+    let stateTwo = state[1].filter(el => {
+        if (el.category !== categoryName) {
+            return el;
+        }
+    });
+    state[0] = stateOne;
+    state[1] = stateTwo;
 }
 
-// export function deleteCategory(id: number): Promise<void> {
-//     const categoryIndex = categories.findIndex((cat) => cat.id === id);
-//     if (categoryIndex < 0) return Promise.reject(new Error('Category not found'));
-//     categories.splice(categoryIndex, 1);
-//     return Promise.resolve();
-// }
-
-export function createCategory(data: Category): Promise<Category> {
-    const isExists = categories.findIndex((cat) => cat.category === data.category) >= 0;
-    if (isExists) {
-        return Promise.reject(new Error(`Category with name ${data.category} already exists`));
-    }
-    const newCategory: Category = {
-        ...data,
-        id: newId(),
-    };
-    categories.push(newCategory);
-    return Promise.resolve(newCategory);
-}
-
-export function getWord(word: string) {
-    for (let key in categories) {
-    const findWord = categories.filter(e => e.word === word);
-    return findWord;
-    }
- }
-
- export function deleteCategory(category: string) {
-    for (let key in categories) {
-    const categoryNew = categories.filter(e => e.category !== category);
-    categories = [...categoryNew];
-    }
- }
-
- export function deleteCategoryByCategoryName(categoryName: string) {
-   let stateOne = state[0].filter(el => {
-    if (el.category !== categoryName) {
-        console.log(el.category);
-        return el;
-    }
-});
-let stateTwo = state[1].filter(el => {
-    if (el.category !== categoryName) {
-        return el
-    }
-});
-state[0] = stateOne;
-state[1] = stateTwo;
- }
-
- export function createNewCategory(data: any): Promise<any> {
+export function createNewCategory(data: any): Promise<any> {
     const isExists = state[0].findIndex((cat) => cat.category === data.category) >= 0;
     if (isExists) {
         return Promise.reject(new Error(`Category with name ${data.category} already exists`));
