@@ -1,0 +1,23 @@
+.train-play {
+  width: 100%;
+  margin: 0 0 0 40px;
+  font-size: 45px;
+  animation: mig  5s infinite;
+
+  color: #fff;
+}
+
+@keyframes mig {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}

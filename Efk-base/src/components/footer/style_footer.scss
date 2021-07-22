@@ -1,0 +1,67 @@
+.rs-school {
+  background-image: url('/public/rs_school_js.svg');
+  background-size: 100px 200px;
+  padding-left: 41px;
+  background-position: center;
+  width: 59px;
+}
+
+.rs-school:hover {
+  transform: scale(1.05);
+  transition: .7s;
+}
+
+footer {
+  width: 100%;
+  height: 77px;
+  background-image: url('/public/footer-img.png');
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 45px;
+}
+
+.link_author {
+  background-image: url('/public/GitHub-logo.png');
+  background-size: 100px 50px;
+  height: 50px;
+  width: 70px;
+  background-position: center;
+  margin-top: 12px;
+}
+
+.link_author:hover {
+  opacity: 0.65;
+  transition: .3s;
+  transform: translateY(0.3rem);
+}
+
+.created {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  margin-left: 190px;
+  color: purple;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+}
+
+.created:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

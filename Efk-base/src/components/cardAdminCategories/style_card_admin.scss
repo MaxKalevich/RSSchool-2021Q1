@@ -1,0 +1,140 @@
+.card-main-admin {
+  background-position: center;
+  background-size: cover;
+}
+
+.cards-field {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-container-admin {
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1%;
+  perspective: 35rem;
+
+}
+
+.card-admin:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem black;
+}
+
+.card-admin {
+  width: 298px;
+  height: 248px;
+  transform-style: preserve-3d;
+  transition: all .3s;
+  transform-origin: right;
+  position: relative;
+  box-shadow: 0 0 0.25rem black;
+  border-radius: .5rem;
+  margin: 10px
+}
+
+.card-header {
+  font-size: 23px;
+}
+
+.card-signature-admin {
+  color: black;
+  height: 30px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding-top: 5px;
+  font-size: 26px;
+  position: relative;
+  top: 65px;
+  width: 140px;
+  animation: mig  5s infinite;
+}
+
+.card-signature-admin2 {
+  color: black;
+  height: 30px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding-top: 5px;
+  font-size: 26px;
+  position: relative;
+  top: 65px;
+  width: 140px;
+  animation: mig  5s infinite;
+}
+
+@keyframes mig {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+.card-admin > .card-main-admin {
+  position: absolute;
+  backface-visibility: hidden;
+  top: 20px;
+  left: 20px;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.card-admin {
+  cursor: pointer;
+  width: 298px;
+  height: 248px;
+  transform-style: preserve-3d;
+  transition: all .3s;
+  transform-origin: right;
+  position: relative;
+  box-shadow: 1px 3px 4px rgb(0 0 0 / 5%);
+  border-radius: 19px 19px 19px 19px;
+  margin: 10px;
+  background-position: 100% 100%;
+  background-color: white;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.card-admin:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
+  transform: scale(1.01);
+}
+
+.btn-wrapper {
+  position: relative;
+  top: 105px;
+  left: 140px;
+}
+
+.update,
+.add-word {
+  border-radius: 20px;
+}
+
+.btn-delete {
+  background-image: url('/public/delete.png');
+  background-size: cover;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
