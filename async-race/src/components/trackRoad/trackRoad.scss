@@ -1,0 +1,76 @@
+.road-wrapper {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.road-wrapper-road-car {
+  width: 100px;
+  height: 60px;
+}
+
+.road-wrapper-road {
+  height: 60px;
+  border-bottom: 2px white dotted;
+}
+
+.road-wrapper-road-finish {
+display: inline-block;
+float: right;
+margin-right: 120px;
+position: relative;
+top: -70px;
+}
+
+.road-wrapper-button-start,
+.road-wrapper-button-stop {
+  border: none;
+  background-color: pink;
+  width: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 3px;
+  color: black;
+}
+
+.road-wrapper-button-start:active {
+  transform: scale(0.9);
+}
+
+.road-wrapper-button-stop:active {
+  transform: scale(0.9);
+}
+
+.road-wrapper-button-select,
+.road-wrapper-button-remove {
+  border: none;
+  background-color: dodgerblue;
+  width: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 3px;
+  color: yellow;
+}
+
+.road-wrapper-button-select:active {
+  transform: scale(0.9);
+}
+
+.road-wrapper-button-remove:active {
+  transform: scale(0.9);
+}
+
+.road-wrapper-road-car-name {
+  position: absolute;
+  width: 80px;
+  left: 0;
+  top: -5px;
+}
+
+.road-wrapper-button-stop {
+  background-color: silver;
+}
+
+.road-wrapper-button-start {
+  background-color: pink;
+}
